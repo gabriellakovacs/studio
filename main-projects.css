@@ -48,13 +48,12 @@ p {
 /* grid fade-in title effect*/
 
 #grid {
-    width: 87vh;
-    height: 87vh;
+/*    width: 85vh;*/
+    height: 85vh;
     display: inline-block;
     float: left;
     position: relative;
-/*    top: 0;*/
-    margin-left: 350px;
+    margin-left: 300px;
     margin-top: 42px;
     padding-top: 3vh;
 /*    border: 1px solid blue;*/
@@ -65,13 +64,12 @@ p {
     overflow: hidden;
     display: inline-block;
     font-size:  10pt;
+/*
     margin: 4%;
-    margin-top: 0;
-    width: 22%;
-    height: 22%;
+    width: 24%;
+    height: 24%;
+*/
     border: 1px solid #A0A0A0;
-/*    border: 1px solid red;*/
-/*    margin: 1%;*/
 }
 
 .box img {
@@ -110,6 +108,7 @@ p {
         opacity: 1;
         }
 
+/*
 @media (max-height:560px) {
     
     #grid {
@@ -122,5 +121,6 @@ p {
         
     }
 }
+*/
 
 
