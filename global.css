@@ -104,7 +104,7 @@ article p{
         height: 100vh;
         padding-top: 30px;
         background-color: rgba(110, 110, 110, .9); 
-        z-index: 20;
+        z-index: 50;
     }
     nav li {
         display: block;
@@ -134,10 +134,10 @@ article p{
         font-size:20px;
         font-weight: bold;
         text-align: center;
-        z-index: 11;
+        z-index: 55;
         color: black;
 		}
-    #nav.js {
+    #mainNav.js {
 			display: none;
 		}
     #menu.active {
