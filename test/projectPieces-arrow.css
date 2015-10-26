@@ -1,0 +1,59 @@
+#navInsideProject {
+    position: fixed;
+   left: 160px;
+   display: inline-block;
+/*    border: 1px solid red;*/
+   margin: auto;
+    width: 50px;
+}
+
+#navInsideProject img {
+  
+    width: 10px;
+    height: auto;
+    border: none;
+}
+
+/*
+#navInsideProject #right img{
+    position: absolute;
+    right: 0;
+     width: 20px;
+    height: 30px;
+}
+*/
+
+
+
+#one-image img {
+    position: fixed;
+    top: 44px;
+    left: 350px;
+    margin: 0;
+    margin-left: 39.84vh;
+    max-height: 79vh;
+    width: auto;
+    padding: 0;
+    margin-top: 3vh;
+/*    padding-top: 3vh;*/
+    z-index: 0;
+    
+}
+
+.box {
+    width: 20px;
+    height: 30px;
+    margin: 0;
+    border: none;
+   
+}
+#navInsideProject a:first-child {
+    margin-top: 0;
+}
+
+
+
+#viewedProject {
+    border: 1px solid black;
+    z-index: 2;
+}

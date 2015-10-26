@@ -1,0 +1,44 @@
+@charset "utf-8";
+body {
+    overflow-y: hidden;
+}
+
+.images {
+    padding-top: 5vh;
+}
+.images section{
+    margin-top:3px;
+    margin-bottom: 0%;
+    padding: 0%;
+    width: 7500px;
+    overflow-x: visible;
+}
+
+img {
+    margin: 2px;
+	border: 1px solid grey;
+    display:inline-block;
+    *display:inline;/* For IE7*/
+    *zoom:1;/* For IE7*/
+    padding: 0;
+    max-height: 43vh;
+    width: auto;
+ }
+
+.lowerImages{
+	margin-top: 0px;
+    padding: 0;
+}
+.upperImages {
+    margin-bottom: 0;
+}
+.upperImages img {
+    vertical-align:bottom;
+ }
+.lowerImages img {
+    vertical-align:top;
+ }
+
+#space1 {
+    padding-left: 10px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="html" lang="en-US">
+ <head>
+     
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+<link rel="shortcut icon" href="images/favicon.ico?373000845"/>
+  <title>CONTACT</title>
+   
+  <!-- CSS -->
+  
+  <style>
+  #map {height:35em;
+  width:35em;
+  border:1px black solid;
+  }
+  </style>
+  <link href="global.css" rel="stylesheet" type="text/css">
+     <link href="contact.css" rel="stylesheet" type="text/css">
+  
+   
+  <!-- Other scripts -->
+     
+ <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var LatLng = {lat: 51.530348, lng: -0.061385};
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: LatLng,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        var marker = new google.maps.Marker({
+    position: LatLng,
+    map: map,
+    title: 'Hughes Meyer Studio'
+  });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+ 
+   </head>
+<body>
+      <header id="mainHeader"><h1>hughes meyer studio</h1>
+     <nav>
+     <ul>
+         <li><a href="index.html">projects</a></li>
+         <li><a href="publications.html">publications</a></li>
+         <li><a href="press.html">press</a></li>
+         <li><a href="about.html">about</a></li>
+         <li id="activeLink">contact</li>
+    </ul>
+    </nav>
+    </header>
+     
+    <section class = "map" itemscope itemtype = "http://schema.org/PostalAddress"><address><span itemprop = "streetAddress">1-2 Teesdale Yard</span>, <br>London <span itemprop = "postalCode">E2 6QE</span>, <br><span itemprop = "addressCountry">United Kingdom</span></address><span itemprop = "telephone"> +44 20 7739 9370</span><br><br> <span itemprop = "email">info@hughesmeyerstudio.com</span><br>
+    <span itemprop = "url"><a href="http://www.hughesmeyerstudio.com" target="_blank">www.hughesmeyerstudio.com</a></span><br>
+     <span itemprop = "url"><a href="http://www.jonathanmeyerart.com" target="_blank">www.jonathanmeyerart.com</a></span>
+        
+        <a href="https://instagram.com/isidoreajar/" target="_blank"><img src="images/contact/4603507837.png" width="40" height="40"></a>
+     </section>
+     
+     <div id="map"></div>
+
+
+   </body>
+</html>

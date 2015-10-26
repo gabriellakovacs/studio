@@ -1,0 +1,26 @@
+@charset "utf-8";
+section.map {
+	color: #000000;
+	padding-top: 20%;
+	margin-bottom: 0px;
+    width: 20%;
+    float: left;
+}
+address   {
+	margin-bottom: 2em;
+}
+.map a {
+	margin-top: 15%;
+	padding-top: 5%;
+}
+
+#map {
+    float: right;
+    width: 40%;
+    margin-right: 35%;
+    margin-top: 5%;
+}
+img {
+    display: block;
+    padding: 1%;
+}

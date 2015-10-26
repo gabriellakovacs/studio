@@ -1,0 +1,49 @@
+@charset "utf-8";
+body {
+    overflow-x: visible;
+}
+
+.images {
+    padding-top: 44px;
+    width: 7500px;
+    height: 77vh;
+  
+}
+
+img {
+    margin: 2px;
+	border: 1px solid #A0A0A0;
+    display:inline-block;
+    *display:inline;/* For IE7*/
+    *zoom:1;/* For IE7*/
+    padding: 0;
+/*    max-height: 43vh;*/
+    width: auto;
+ }
+
+.upperImages, .lowerImages, .container {
+    margin: 0;
+    padding: 0;
+}
+
+.lowerImages {
+     margin-top: 3px;
+}
+.upperImages img {
+    vertical-align:bottom;
+ }
+.lowerImages img {
+    vertical-align:top;
+ }
+
+.container {
+    display: inline-block;
+    position: relative;
+/*    border: 1px solid red;*/
+    
+}
+
+#space1 {
+    position: absolute;
+    right: 0;
+}

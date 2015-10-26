@@ -1,0 +1,66 @@
+/*
+#navInsideProject {
+    position: fixed;
+    top: 44px;
+    left: 321px;
+    height: 167px;
+    width: 50px;
+    padding-top: 3vh;
+    border: 1px solid red;
+}
+*/
+#previous, #next {
+    margin: 0;
+    padding: 0;
+     width: 30px;
+    height: 85vh;
+    border: 1px solid red;
+    position: fixed;
+    top: 44px;
+    margin-top: 3vh;
+    margin-top: 3vh;
+   
+}
+#previous {
+    cursor:url(images/l-arrow-full-small.png), auto;
+     left: 320px;
+}
+
+#next {
+    cursor:url(images/r-arrow-full-s-grey.png), auto;
+     left: 800px;
+}
+#projectHeader img {
+    border: none;
+}
+
+#zoom {
+    position: fixed;
+    top: 44px;
+    left: 200px;
+    margin: 0;
+    max-height: 85vh;
+    width: auto;
+    padding: 0;
+    margin-top: 3vh;
+/*    padding-top: 3vh;*/
+    
+}
+
+.box {
+    width: 8.2vh;
+    height: 8.2vh;
+    margin: -6px;
+    margin-left: 0;
+    padding: 0;
+}
+#navInsideProject a:first-child {
+    margin-top: 0;
+}
+
+
+
+#viewedProject {
+    border: 1px solid black;
+    z-index: 2;
+}
