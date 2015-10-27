@@ -51,12 +51,14 @@ p {
 /*    width: 85vh;*/
     height: 85vh;
     display: inline-block;
-    float: left;
-    position: relative;
-    margin-left: 300px;
-    margin-top: 42px;
+/*    float: left;*/
+    position: fixed;
+    left: 320px;
+    top: 42px;
+/*    margin-left: 300px;*/
+/*    margin-top: 42px;*/
     padding-top: 3vh;
-/*    border: 1px solid blue;*/
+    border: 1px solid blue;
 }
 
 .box {
@@ -107,20 +109,4 @@ p {
 .box:hover .caption {
         opacity: 1;
         }
-
-/*
-@media (max-height:560px) {
-    
-    #grid {
-        width: 207.5vh;
-        height: 83vh;
-    }
-    .box {
-        height: 48%;
-        width: 19.2%;
-        
-    }
-}
-*/
-
 
