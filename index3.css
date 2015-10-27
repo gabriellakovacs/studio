@@ -31,6 +31,7 @@ img {
 }
 .upperImages {
     margin-bottom: 0;
+    border: 1px solid red;
 }
 .upperImages img {
     vertical-align:bottom;
