@@ -6,7 +6,7 @@ body {
 .images {
     padding-top: 44px;
     width: 7500px;
-    height: 77vh;
+    height: 100%;
   
 }
 
@@ -17,34 +17,35 @@ img {
     *display:inline;/* For IE7*/
     *zoom:1;/* For IE7*/
     padding: 0;
-/*    max-height: 43vh;*/
-    width: auto;
  }
 
-.upperImages, .lowerImages {
+.upperImages, .lowerImages, .container {
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    position: relative;
 }
 
-.lowerImages {
-     margin-top: 3px;
+
+.upperImages div{
+    display: inline;
+/*   border: 1px solid green;*/
 }
-.upperImages img {
-    vertical-align:bottom;
- }
+.upperImages {
+    display: inline;
+    vertical-align: bottom;
+}
+
 .lowerImages img {
     vertical-align:top;
  }
 
 .container {
     display: inline-block;
-    position: relative;
 /*    border: 1px solid red;*/
     
 }
 
-#space1 {
+#pianoTrajectory {
     position: absolute;
     right: 0;
 }
