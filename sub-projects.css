@@ -1,6 +1,6 @@
 #sub-project-container {
     position: fixed;
-    top: 42px;
+    top: 37px;
     left: 320px;
     display: inline-block;
     width: 500px;           /*set by javascript */

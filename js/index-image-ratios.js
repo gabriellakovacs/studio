@@ -1,18 +1,9 @@
 var tallestImgHeight = 373;
 var tallestImgWidth = 150;
-var headerH = 42;
+var headerH = 37;
 var borders = 2;
 
 var imagesList = [
-    ["space10", 50],
-    ["space9", 48],
-    ["space8", 86],
-    ["space7", 14],
-    ["space6", 82],
-    ["space5", 50],
-    ["space4", 50],
-    ["space3", 82],
-    ["space2", 12],
     ["chance", 150], 
     ["forAllIntenets", 250], 
     ["hanging", 250], 
@@ -46,7 +37,7 @@ var imagesList = [
     ["workInProgress2", 150], 
     ["errorL", 250], 
     ["pianoTrajectory", 350], 
-    ["sayaka", 252],  //
+    ["sayaka", 250],  //
     ["drawings", 250], 
     ["rochesterOutside2", 250],
     ["societyOfTheColosseum", 250],
@@ -79,13 +70,24 @@ $(document).ready(function (e) {
     scaleCollage();
 });
 function scaleCollage() {
+
+    var viewportHeight = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
     //set height for upper and lower images' container
-    document.getElementById("upperImages").style.height = (window.innerHeight / 2 - headerH - borders).toString().concat("px");
-    document.getElementById("lowerImages").style.height = (window.innerHeight / 2 - headerH - borders).toString().concat("px");
+    var upperImages = document.querySelectorAll(".upperImages");
+    var lowerImages = document.querySelectorAll(".lowerImages");
+    
+    for (i = 0; i < upperImages.length; i++) {
+        upperImages[i].style.height = (viewportHeight / 2 - headerH - borders).toString().concat("px");
+        lowerImages[i].style.height = (viewportHeight / 2 - headerH - borders).toString().concat("px");
+    }
+    
 
     //set images' width propery as a percentage of their container - so that scaling will be proportional to the tallest image
 
-    var tallestImgActualHeight = window.innerHeight / 2 - headerH - borders;
+    var tallestImgActualHeight = viewportHeight / 2 - headerH - borders;
     var tallestImgActualWidth = tallestImgWidth / tallestImgHeight * tallestImgActualHeight;
 
 
@@ -94,10 +96,3 @@ function scaleCollage() {
 
     }
 }
-
-//function Image (id, width) {
-//    this.id = id;
-//    this.width = width;
-//}
-//
-//Image.prototype.
