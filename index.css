@@ -3,7 +3,7 @@ body {
     overflow-x: visible;
 }
 
-.images {
+#indexMainContainer {
     padding-top: 37px;
     width: 7500px;
     height: 85vh;
