@@ -1,5 +1,5 @@
-var side = 320;
-var rightMargin = 20;
+var side = 320,
+    rightMargin = 20;
 
 
 
@@ -55,11 +55,10 @@ function gridLayout() {
     for (i = 0; i < boxes.length; i++) {
         boxes[i].style.width = (viewportRatio).toString().concat(dimension);
         boxes[i].style.height = (viewportRatio).toString().concat(dimension);
-        boxes[i].style.margin = (viewportRatio / 7.5).toString().concat(dimension);
+        boxes[i].style.marginLeft = (viewportRatio / 7.5).toString().concat(dimension);
+        boxes[i].style.marginRight = (viewportRatio / 7.5).toString().concat(dimension);
+        boxes[i].style.marginBottom = (2 * viewportRatio / 7.5).toString().concat(dimension);
         
-        if (i < bestFit[0]) {
-            boxes[i].style.marginTop = '0';
-        }
     }
     
     document.getElementById("grid").style.paddingRight = (viewportRatio / 75 * 100).toString().concat(dimension);
