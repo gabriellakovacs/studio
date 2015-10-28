@@ -5,9 +5,8 @@
          <link rel="shortcut icon" href="../images/favicon.ico?373000845"/>
          <link href="../css/global.css" rel="stylesheet" type="text/css">
          <link href="../css/main-projects.css" rel="stylesheet" type="text/css">
-         <link href="../css/sub-projects.css" rel="stylesheet" type="text/css">
          
-         <title>lessons from piranesi</title>
+         <title>Projects</title>
      </head>
     
     
@@ -28,22 +27,22 @@
           
              <header id="projectHeader">
                  <a href="index.html">
-                    <img src="../images/projects/drawings-that-count/cover.jpg" alt="Cover of the book: 'Drawings that count'"/>
+                    <img src={{coverImageSrc}} alt={{coverImageAlt}}/>
                  </a>
 
-                 <h2><cite>Lessons from Piranesi I</cite></h2>
-                 <p>2009, Diploma Unit 15, Architectural Association
+                 <h2><cite>{{subProjectTitle}}</cite></h2>
+                 <p>{{subProjectInfo}}
                  <br>
-                 Gergely Kovács
+                 {{subProjectAuthor}}
                  <br>
-                 Drawings that Count
+                 {{mainProjectTitle}}
                  <br>
-                 Architectural Association Publications, 2013</p>
+                 {{mainProjectPublisher}}</p>
 
              </header>
  
              <p id="aboutProject">
-               
+             {{aboutProject}}
              </p>
       
          </article>
@@ -51,11 +50,11 @@
         
      <div id="sub-project-container">
          <nav>
-             <a id="previous" href="theo2.html" title="view previous project"></a>
-             <a id="next" href="hannibals-Alpine-Passage.html" title="view next project"></a>
+             <a id="previous" href={{prevProjectHref}} title="view previous project"></a>
+             <a id="next" href={{nextProjectHref}} title="view next project"></a>
          </nav>
 
-         <img  id="mainImage" src="../images/projects/drawings-that-count/gergely.jpg" width="1000" height="2000" alt="Lessons from Piranesi" data-zoom-image="../images/projects/drawings-that-count/zoom/gergely.jpg"   />            
+         <img  id="mainImage" src={{mainImgSrc}} alt="Lessons from Piranesi" data-zoom-image={{mainImgZoomSrc}}  />            
 
      </div>
          
