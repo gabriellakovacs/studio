@@ -1,0 +1,1 @@
+ $("#mainImage").elevateZoom({constrainType:"height", constrainSize:274, zoomType: "lens", containLensZoom: true,  cursor: "none", borderSize: 1}); 
