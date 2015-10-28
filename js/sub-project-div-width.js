@@ -1,5 +1,5 @@
-var side = 320;
-var rightMargin = 20;
+var side = 320,
+	rightMargin = 20;
 
 window.onresize = function () {
     var viewportW = window.innerWidth;

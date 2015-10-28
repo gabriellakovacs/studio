@@ -17,7 +17,7 @@ function gridLayout() {
     document.getElementById("grid").style.width = (availableW).toString().concat("px");
     
     
-    var nrOfBoxes = document.querySelectorAll('#grid .box').length;
+    var nrOfBoxes = document.querySelectorAll("#grid .box").length;
     var gridDimensions = [];
     
     for (i = 1; i <= nrOfBoxes; i++) {

@@ -1,5 +1,4 @@
-$("#mainNav").addClass("js");
-$("#mainNav").addClass("js").before('<div id="menu">☰</div>');
+$("#mainNav").before('<div id="menu">☰</div>');
 $("#menu").click(function () {
     $("#mainNav").toggle();
     if ($("#menu").hasClass("active")) {
