@@ -3,7 +3,7 @@
     position: absolute;
     left: 0;
     top: 0;
-/*    border: 1px solid green;*/
+    /*border: 1px solid green;*/
     width: 280px;
     min-height: 85vh;
     padding: 0;
@@ -26,8 +26,8 @@
 
 #projectHeader img {
     border: 1px solid #A0A0A0;
-    width: 280;
-    height: 167;
+    width: 280px;
+    height: 167px;
 }
 
 

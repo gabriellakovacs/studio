@@ -83,13 +83,6 @@ a {
 	font-style: italic;
 }
 
-/*
-
-article p{
-    width: 20%;
-    clear: both;
-}
-*/
 
 @media (max-width:580px) {
     header h1 {
