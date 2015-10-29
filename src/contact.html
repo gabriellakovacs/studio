@@ -4,42 +4,11 @@
      
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
 <link rel="shortcut icon" href="images/favicon.ico?373000845"/>
+<link href="css/global.css" rel="stylesheet" type="text/css">
+<link href="css/contact.css" rel="stylesheet" type="text/css">
+<link href="css/main-project.css" rel="stylesheet" type="text/css">
   <title>CONTACT</title>
    
-  <!-- CSS -->
-  
-  <style>
-  #map {height:35em;
-  width:35em;
-  border:1px black solid;
-  }
-  </style>
-  <link href="css/global.css" rel="stylesheet" type="text/css">
-     <link href="css/contact.css" rel="stylesheet" type="text/css">
-  
-   
-  <!-- Other scripts -->
-     
- <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      function initialize() {
-        var LatLng = {lat: 51.530348, lng: -0.061385};
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: LatLng,
-          zoom: 16,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-        var marker = new google.maps.Marker({
-    position: LatLng,
-    map: map,
-    title: 'Hughes Meyer Studio'
-  });
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
- 
    </head>
 <body>
       <header id="mainHeader"><h1>hughes meyer studio</h1>
@@ -54,14 +23,19 @@
     </nav>
     </header>
      
-    <section class = "map" itemscope itemtype = "http://schema.org/PostalAddress"><address><span itemprop = "streetAddress">1-2 Teesdale Yard</span>, <br>London <span itemprop = "postalCode">E2 6QE</span>, <br><span itemprop = "addressCountry">United Kingdom</span></address><span itemprop = "telephone"> +44 20 7739 9370</span><br><br> <span itemprop = "email">info@hughesmeyerstudio.com</span><br>
-    <span itemprop = "url"><a href="http://www.hughesmeyerstudio.com" target="_blank">www.hughesmeyerstudio.com</a></span><br>
-     <span itemprop = "url"><a href="http://www.jonathanmeyerart.com" target="_blank">www.jonathanmeyerart.com</a></span>
+    <section id="side" itemscope itemtype = "http://schema.org/PostalAddress">
+      <div>
+        <address><span itemprop = "streetAddress">1-2 Teesdale Yard</span>, <br>London <span itemprop = "postalCode">E2 6QE</span>, <br><span itemprop = "addressCountry">United Kingdom</span>
+        </address>
+        <span itemprop = "telephone"> +44 20 7739 9370</span><br><br> <span itemprop = "email">info@hughesmeyerstudio.com</span><br>
+        <span itemprop = "url"><a href="http://www.hughesmeyerstudio.com" target="_blank">www.hughesmeyerstudio.com</a></span><br>
+        <span itemprop = "url"><a href="http://www.jonathanmeyerart.com" target="_blank">www.jonathanmeyerart.com</a></span>
         
-        <a href="https://instagram.com/isidoreajar/" target="_blank"><img src="images/contact/4603507837.png" width="40" height="40"></a>
+        <a href="https://instagram.com/isidoreajar/" target="_blank"><img class="icon" src="images/contact/4603507837.png" width="40" height="40"></a>
+      </div>
      </section>
      
-     <div id="map"></div>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4964.20050815363!2d-0.059175!3d51.529721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x666d8b29669ecf45!2sHughes+Meyer+Studio!5e0!3m2!1sen!2suk!4v1402260210913"></iframe>
 
 
    </body>

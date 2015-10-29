@@ -1,26 +1,38 @@
 @charset "utf-8";
-section.map {
-	color: #000000;
-	padding-top: 20%;
-	margin-bottom: 0px;
-    width: 20%;
-    float: left;
+#side div   {
+    position: relative;
+	top: 167px;
+    display: inline;
 }
-address   {
-	margin-bottom: 2em;
-}
-.map a {
+#side a {
 	margin-top: 15%;
 	padding-top: 5%;
 }
-
-#map {
-    float: right;
-    width: 40%;
-    margin-right: 35%;
-    margin-top: 5%;
-}
-img {
+#side .icon {
     display: block;
     padding: 1%;
+}
+iframe {
+    display: inline-block;
+    position: fixed;
+    left: 320px;
+    width: 448px;
+    height: 448px;
+   top: 37px;
+    padding-top: 3vh;
+    border: 0;
+}
+#side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*border: 1px solid green;*/
+    width: 280px;
+    min-height: 85vh;
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 37px;
+    z-index: 2;
+    background-color: #fff;
 }
