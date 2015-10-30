@@ -51,8 +51,12 @@
              <a id="next" href={% block nextProjectHref %}{% endblock %} title="view next project"></a>
          </nav>
 
-         <img  id="mainImage" src={% block mainImgSrc %}{% endblock %} alt={% block subProjectAlt %}{% endblock %} data-zoom-image={% block mainImgZoomSrc %}{% endblock %}  />            
+         <img  id="mainImage" src="../images/projects/{% block mainProjectFolder %}{% endblock %}/{% block subProjectImgName %}{% endblock %}.jpg" alt={% block subProjectAlt %}{% endblock %} data-zoom-image="../images/projects/{% block mainProjectFolder %}{% endblock %}/zoom/{% block subProjectImgName %}{% endblock %}.jpg"  />    
+   
+         <img src={% block mainImgSrc %}{% endblock %} alt={% block subProjectAlt %}{% endblock %}/>            
+  
 
+         
      </div>
          
     

@@ -25,10 +25,19 @@ gulp.task("minify", function() {
 //create new subproject with template
 
 gulp.task("templates", function() {
-  gulp.src("./src/template/ancientcity.html")
+  gulp.src("./src/template/architecture-of-error/fokker.html")
     .pipe(swig())
-    .pipe(gulp.dest("./dist/"))
+    .pipe(gulp.dest("./dist/architecture-of-error"))
 });
+
+//create main template for Error sub prjects
+
+gulp.task("errortemplates", function() {
+  gulp.src("./src/template/error-sub-template.html")
+    .pipe(swig())
+    .pipe(gulp.dest("./src/template/architecture-of-error"))
+});
+
 
 
 // //create new subproject with template
