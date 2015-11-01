@@ -1,4 +1,15 @@
-{% extends 'drawings-sub-project.html' %}
+{% extends 'sub-project.html' %}
+
+
+{% block mainProjectTitle %}Drawings that Count{% endblock %}
+
+{% block mainProjectPublisher %}Architectural Association Publications, 2013{% endblock %}
+
+{% block coverImageAlt %} "Drawings that count cover"{% endblock %}
+
+{% block mainProjectFolder %}drawings-that-count{% endblock %}
+
+
 
 
 {% block subProjectTitle %}Panama Canal Futures Exchange: Sculpting in Time{% endblock %}
@@ -15,9 +26,13 @@ The waiting time in international waters at either end of the canal is relocated
 {% endblock %}
 
 
-{% block nextProjectHref %}"verne.html"{% endblock %}
+{% block nextProjectHref %}"smallrock.html"{% endblock %}
 
-{% block prevProjectHref %}"neutrality.html"{% endblock %}
+{% block prevProjectHref %}"vernecalculator.html"{% endblock %}
 
 {% block subProjectImgName %}futuresexchange{% endblock %}
+
+{% block zoomId %}id="zoom"{% endblock %}
+
+{% block zoomSrc %}data-zoom-image="../images/projects/drawings-that-count/zoom/futuresexchange.jpg"{% endblock %}   
 

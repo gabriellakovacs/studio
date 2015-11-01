@@ -1,4 +1,14 @@
-{% extends 'drawings-sub-project.html' %}
+{% extends 'sub-project.html' %}
+
+{% block mainProjectTitle %}Drawings that Count{% endblock %}
+
+{% block mainProjectPublisher %}Architectural Association Publications, 2013{% endblock %}
+
+{% block coverImageAlt %} "Drawings that count cover"{% endblock %}
+
+{% block mainProjectFolder %}drawings-that-count{% endblock %}
+
+
 
 {% block subProjectTitle %}Perspectival Forensic Study, I, of JMW Turner’s Homage to Claude Lorrain’s Seaport with the Embarkation of the Queen of Sheba (1648), Dido Building Carthage (1851){% endblock %}
 
@@ -14,10 +24,12 @@ Han’s analysis of Turner’s tribute to Lorrain finds it is not as faithful as
 {% endblock %}
 
 
-{% block nextProjectHref %}"verne.html"{% endblock %}
+{% block nextProjectHref %}"gap.html"{% endblock %}
 
-{% block prevProjectHref %}"neutrality.html"{% endblock %}
+{% block prevProjectHref %}"colosseum.html"{% endblock %}
 
 {% block subProjectImgName %}turnerhomage{% endblock %}
 
+{% block zoomId %}id="zoom"{% endblock %}
 
+{% block zoomSrc %}data-zoom-image="../images/projects/drawings-that-count/zoom/turnerhomage.jpg"{% endblock %}   

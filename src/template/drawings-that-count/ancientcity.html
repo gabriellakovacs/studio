@@ -1,4 +1,15 @@
-{% extends 'drawings-sub-project.html' %}
+{% extends 'sub-project.html' %}
+
+
+
+{% block mainProjectTitle %}Drawings that Count{% endblock %}
+
+{% block mainProjectPublisher %}Architectural Association Publications, 2013{% endblock %}
+
+{% block coverImageAlt %} "Drawings that count cover"{% endblock %}
+
+{% block mainProjectFolder %}drawings-that-count{% endblock %}
+
 
 
 {% block subProjectTitle %}The Sisyphean Engine of Reconstruction or the Perpetual Rebuilding of the Agrigento’s Ancient City{% endblock %}
@@ -16,10 +27,14 @@ It is possible to calculate, with varying degrees of indeterminacy, the original
 {% endblock %}
 
 
-{% block nextProjectHref %}"verne.html"{% endblock %}
+{% block nextProjectHref %}"piranesi.html"{% endblock %}
 
-{% block prevProjectHref %}"neutrality.html"{% endblock %}
+{% block prevProjectHref %}"hannibalpassage.html"{% endblock %}
 
 {% block subProjectImgName %}ancientcity{% endblock %}
+
+{% block zoomId %}id="zoom"{% endblock %}
+
+{% block zoomSrc %}data-zoom-image="../images/projects/drawings-that-count/zoom/ancientcity.jpg"{% endblock %}   
 
 

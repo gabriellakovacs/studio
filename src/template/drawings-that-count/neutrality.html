@@ -1,4 +1,15 @@
-{% extends 'drawings-sub-project.html' %}
+{% extends 'sub-project.html' %}
+
+
+{% block mainProjectTitle %}Drawings that Count{% endblock %}
+
+{% block mainProjectPublisher %}Architectural Association Publications, 2013{% endblock %}
+
+{% block coverImageAlt %} "Drawings that count cover"{% endblock %}
+
+{% block mainProjectFolder %}drawings-that-count{% endblock %}
+
+
 
 {% block subProjectTitle %}The Construction of Neutrality{% endblock %}
 
@@ -14,10 +25,14 @@ An impossible complex of overlapping cultural and political territories, the Tem
 {% endblock %}
 
 
-{% block nextProjectHref %}"verne.html"{% endblock %}
+{% block nextProjectHref %}"unionstockyards.html"{% endblock %}
 
-{% block prevProjectHref %}"neutrality.html"{% endblock %}
+{% block prevProjectHref %}"inversion.html"{% endblock %}
 
 {% block subProjectImgName %}neutrality{% endblock %}
+
+{% block zoomId %}id="zoom"{% endblock %}
+
+{% block zoomSrc %}data-zoom-image="../images/projects/drawings-that-count/zoom/neutrality.jpg"{% endblock %}   
 
 

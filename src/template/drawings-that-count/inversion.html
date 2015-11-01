@@ -1,4 +1,15 @@
-{% extends 'drawings-sub-project.html' %}
+{% extends 'sub-project.html' %}
+
+
+{% block mainProjectTitle %}Drawings that Count{% endblock %}
+
+{% block mainProjectPublisher %}Architectural Association Publications, 2013{% endblock %}
+
+{% block coverImageAlt %} "Drawings that count cover"{% endblock %}
+
+{% block mainProjectFolder %}drawings-that-count{% endblock %}
+
+
 
 {% block subProjectTitle %}Studies in Inversion: Inversion of a Generic Grid{% endblock %}
 
@@ -14,10 +25,14 @@ Inversive geometry constitutes an alternate space (a mapping of Euclidean space 
 {% endblock %}
 
 
-{% block nextProjectHref %}"verne.html"{% endblock %}
+{% block nextProjectHref %}"neutrality.html"{% endblock %}
 
-{% block prevProjectHref %}"neutrality.html"{% endblock %}
+{% block prevProjectHref %}"piranesi.html"{% endblock %}
 
 {% block subProjectImgName %}inversion{% endblock %}
+
+{% block zoomId %}id="zoom"{% endblock %}
+
+{% block zoomSrc %}data-zoom-image="../images/projects/drawings-that-count/zoom/inversion.jpg"{% endblock %}   
 
 

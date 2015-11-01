@@ -1,4 +1,15 @@
-{% extends 'drawings-sub-project.html' %}
+{% extends 'sub-project.html' %}
+
+
+{% block mainProjectTitle %}Drawings that Count{% endblock %}
+
+{% block mainProjectPublisher %}Architectural Association Publications, 2013{% endblock %}
+
+{% block coverImageAlt %} "Drawings that count cover"{% endblock %}
+
+{% block mainProjectFolder %}drawings-that-count{% endblock %}
+
+
 
 {% block subProjectTitle %}A Small Rock at the Top of the Hill = A Big Rock at the Bottom of the Hill{% endblock %}
 
@@ -14,11 +25,13 @@ Survey of the negative potential energy of the fallen rocks on Agrigento’s anc
 {% endblock %}
 
 
-{% block nextProjectHref %}"verne.html"{% endblock %}
+{% block nextProjectHref %}"merdeglace.html"{% endblock %}
 
-{% block prevProjectHref %}"neutrality.html"{% endblock %}
+{% block prevProjectHref %}"futuresexchange.html"{% endblock %}
 
 {% block subProjectImgName %}smallrock{% endblock %}
 
+{% block zoomId %}id="zoom"{% endblock %}
 
+{% block zoomSrc %}data-zoom-image="../images/projects/drawings-that-count/zoom/smallrock.jpg"{% endblock %}   
 

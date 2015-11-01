@@ -25,17 +25,25 @@ gulp.task("minify", function() {
 //create new subproject with template
 
 gulp.task("templates", function() {
-  gulp.src("./src/template/architecture-of-error/fokker.html")
+  gulp.src("./src/template/**/*.html")
+    .pipe(swig())
+    .pipe(gulp.dest("./dist/"))
+});
+
+//create main template for Error main page prjects
+
+gulp.task("errortemplates", function() {
+  gulp.src("./src/template/architecture-of-error/*.html")
     .pipe(swig())
     .pipe(gulp.dest("./dist/architecture-of-error"))
 });
 
-//create main template for Error sub prjects
+//create sub template for drawings main page prjects
 
-gulp.task("errortemplates", function() {
-  gulp.src("./src/template/error-sub-template.html")
+gulp.task("temp", function() {
+  gulp.src("./src/template/drawings-that-count/*.html")
     .pipe(swig())
-    .pipe(gulp.dest("./src/template/architecture-of-error"))
+    .pipe(gulp.dest("./dist/drawings-that-count"))
 });
 
 

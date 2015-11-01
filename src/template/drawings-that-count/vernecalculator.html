@@ -1,4 +1,15 @@
-{% extends 'drawings-sub-project.html' %}
+{% extends 'sub-project.html' %}
+
+
+{% block mainProjectTitle %}Drawings that Count{% endblock %}
+
+{% block mainProjectPublisher %}Architectural Association Publications, 2013{% endblock %}
+
+{% block coverImageAlt %} "Drawings that count cover"{% endblock %}
+
+{% block mainProjectFolder %}drawings-that-count{% endblock %}
+
+
 
 {% block subProjectTitle %}Jules Verne’s Palaeontological Calculator{% endblock %}
 
@@ -14,9 +25,12 @@ In Verne’s Journey to the Centre of the Earth, going down is literally going i
 {% endblock %}
 
 
-{% block nextProjectHref %}"verne.html"{% endblock %}
+{% block nextProjectHref %}"futuresexchange.html"{% endblock %}
 
-{% block prevProjectHref %}"neutrality.html"{% endblock %}
+{% block prevProjectHref %}"qanat.html"{% endblock %}
 
 {% block subProjectImgName %}vernecalculator{% endblock %}
 
+{% block zoomId %}id="zoom"{% endblock %}
+
+{% block zoomSrc %}data-zoom-image="../images/projects/drawings-that-count/zoom/vernecalculator.jpg"{% endblock %}   
