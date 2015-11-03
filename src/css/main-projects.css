@@ -30,6 +30,11 @@
     height: 167px;
 }
 
+#projectHeader #coverImgPlaceholder {
+    width: 280px;
+    height: 167px;
+}
+
 
 #aboutProject {
     padding-top: 380px;

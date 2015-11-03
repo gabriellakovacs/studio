@@ -4,8 +4,9 @@
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-         
+
          <link rel="shortcut icon" href="../images/favicon.ico?373000845"/>
+         
          <link href="../css/global.css" rel="stylesheet" type="text/css">
          <link href="../css/main-projects.css" rel="stylesheet" type="text/css">
          
@@ -29,9 +30,7 @@
          <article id="side">
           
              <header id="projectHeader">
-                 <a href="index.html">
-                    <img src="../images/projects/{% block mainProjectFolder %}{% endblock %}/cover-sub.jpg" alt={% block coverImageAlt %}{% endblock %}/>
-                 </a>
+                 <div class="coverImgPlaceholder"></div>
 
                  <h2><cite>{% block subProjectTitle %}{% endblock %}</cite></h2>
                  <p>{% block subProjectAuthor %}{% endblock %}
