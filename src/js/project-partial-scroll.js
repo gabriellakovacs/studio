@@ -1,3 +1,3 @@
 $(window).scroll(function(){
-                 $('#side').css('left',$(window).scrollLeft());
+                 $('#projectHeader').css('top', $(window).scrollTop());
              });
