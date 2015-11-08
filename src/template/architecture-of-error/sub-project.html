@@ -31,10 +31,10 @@
           
              <header id="projectHeader">
                  <a href="index.html">
-                    <img src="../images/projects/{% block mainProjectFolder %}{% endblock %}/cover-sub.jpg" alt={% block coverImageAlt %}{% endblock %}/>
+                    <img src="../images/projects/{% block mainProjectFolder %}{% endblock %}/cover.jpg" class = "subCover" alt={% block coverImageAlt %}{% endblock %}/>
                  </a>
 
-                 <h2><cite>{% block subProjectTitle %}{% endblock %}</cite></h2>
+                 <h2>{% block subProjectTitle %}{% endblock %}</h2>
                  <p>{% block subProjectAuthor %}{% endblock %}
                  <br>
                  {% block subProjectInfo %}{% endblock %}
