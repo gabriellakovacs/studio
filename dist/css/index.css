@@ -1,0 +1,53 @@
+@charset "utf-8";
+body {
+    overflow-x: visible;
+}
+
+#indexMainContainer {
+    padding-top: 37px;
+    width: 7500px;
+    height: 85vh;
+}
+
+img {
+    margin: 0.2vh;
+	border: 1px solid #A0A0A0;
+    display:inline-block;
+    *display:inline;/* For IE7*/
+    *zoom:1;/* For IE7*/
+    padding: 0;
+ }
+
+.upperImages, .lowerImages, .container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.upperImages, .lowerImages {
+    height: 44vh;
+}
+
+.upperImages div{
+    display: inline;
+/*   border: 1px solid green;*/
+}
+.upperImages {
+    display: inline;
+    vertical-align: bottom;
+}
+
+.lowerImages img {
+    vertical-align:top;
+ }
+
+.container {
+    display: inline-block;
+/*    border: 1px solid red;*/
+    
+}
+
+#pianoTrajectory {
+    position: absolute;
+    right: 0;
+}

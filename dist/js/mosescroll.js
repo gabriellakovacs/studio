@@ -1,0 +1,1 @@
+!function(){function e(e){e=window.event||e;var n=Math.max(-1,Math.min(1,e.wheelDelta||-e.detail));document.documentElement.scrollLeft-=40*n,document.body.scrollLeft-=40*n,e.preventDefault()}window.addEventListener?(window.addEventListener("mousewheel",e,!1),window.addEventListener("DOMMouseScroll",e,!1)):window.attachEvent("onmousewheel",e)}();
