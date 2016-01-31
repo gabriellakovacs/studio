@@ -7,8 +7,7 @@
 
          <link rel="shortcut icon" href="../images/favicon.ico?373000845"/>
          
-         <link href="../css/global.css" rel="stylesheet" type="text/css">
-         <link href="../css/projects.css" rel="stylesheet" type="text/css">
+         <link href="../css/style.css" rel="stylesheet" type="text/css">
 
          <title>Projects</title>
      </head>
@@ -25,9 +24,9 @@
                  </ul>
              </nav>
          </header>
-         <article id="side">
+         <article id="sidePanel">
              <header id="projectHeader">
-                 <img src="../images/projects/{% block mainProjectFolder %}{% endblock %}/cover-main.jpg" alt={% block mainProjectCoverAlt %}{% endblock %}/>
+                 <img class="projectHeaderImg" src="../images/projects/{% block mainProjectFolder %}{% endblock %}/cover-main.jpg" alt={% block mainProjectCoverAlt %}{% endblock %}/>
                  <h2>{% block mainProjectTitle %}{% endblock %}</h2>
                  <p>{% block mainProjectPublisher %}{% endblock %}</p>
                  <p>{% block mainProjectAuthor %}{% endblock %}
@@ -39,7 +38,7 @@
          </article>
 
 
-         <div id="grid">
+         <div id="mainProjectGridContainer">
             {% block subProjects %}{% endblock %} 
 
          </div>
@@ -47,7 +46,6 @@
          
          <script src="../js/jquery.min.js"></script>
          <script src="../js/three-line-menu.js"></script>
-         <script src="../js/font-sizeScaling.js"></script>
          <script src="../js/optimize-grid-layout.js"></script>
          <script src="../js/project-partial-scroll.js"></script>
 

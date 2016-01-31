@@ -109,7 +109,7 @@ function scaleCollage() {
         upperImagesTotalW += upperImages[i][1] / tallestImgWidth * tallestImgActualWidth;
     }
 
-    //set indexMainContainer  width to fit all pictures intended to be on one line
-    document.getElementById("indexMainContainer").style.width = (Math.max(upperImagesTotalW, lowerImagesTotalW) + 100).toString().concat("px");
+    //set indexPicturesGridContainer  width to fit all pictures intended to be on one line
+    document.getElementById("indexPicturesGridContainer").style.width = (Math.max(upperImagesTotalW, lowerImagesTotalW) + 100).toString().concat("px");
 
 }

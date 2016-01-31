@@ -3,6 +3,7 @@
 var side = 320,
     rightMargin = 80;
 var mainHeaderH = 37;
+var boxes = document.querySelectorAll(".mainProjectGridBlock");
 
 
 
@@ -17,10 +18,10 @@ function gridLayout() {
     //set grid width so that it occupies the total available area
     var availableW = window.innerWidth - side - rightMargin;
     var availableH = window.innerHeight - 2*mainHeaderH;
-    document.getElementById("grid").style.width = (availableW).toString().concat("px");
+    document.getElementById("mainProjectGridContainer").style.width = (availableW).toString().concat("px");
     
     
-    var nrOfBoxes = document.querySelectorAll("#grid .box").length;
+    var nrOfBoxes = boxes.length;
 
     //collect all possible column row arrangements based on the number of grid items (exlude those the are less efficient then the ones that are already considered)
     var gridDimensions = [];
@@ -52,18 +53,13 @@ function gridLayout() {
         var viewportRatio = availableH / window.innerHeight / bestFit[1] * 80;
         var dimension = "vh";
     }
-    
-    var boxes = document.querySelectorAll(".box");
-   
-   
-    
+     
     for (i = 0; i < boxes.length; i++) {
         boxes[i].style.width = (viewportRatio).toString().concat(dimension);
         boxes[i].style.height = (viewportRatio).toString().concat(dimension);
         boxes[i].style.marginLeft = (viewportRatio / 8).toString().concat(dimension);
         boxes[i].style.marginRight = (viewportRatio / 8).toString().concat(dimension);
-        boxes[i].style.marginBottom = (2 * viewportRatio / 8).toString().concat(dimension);
-        
+        boxes[i].style.marginBottom = (2 * viewportRatio / 8).toString().concat(dimension);  
     }
     
     //document.getElementById("grid").style.paddingRight = (viewportRatio / 80 * 100).toString().concat(dimension);
