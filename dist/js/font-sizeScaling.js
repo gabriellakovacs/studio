@@ -1,1 +1,0 @@
-fontsize=function(){var n=.09*$("#BOX").width();$(".box span").css("font-size",n)},$(window).resize(fontsize),$(document).ready(fontsize);
