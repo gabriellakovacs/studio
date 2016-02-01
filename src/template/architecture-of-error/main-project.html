@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html class="html" lang="en-US">
-     <head>
-         <meta charset="utf-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
-         <link rel="shortcut icon" href="../images/favicon.ico?373000845"/>
-         
-         <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../images/favicon.ico?373000845"/>
 
-         <title>Projects</title>
-     </head>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
 
-     <body>
-         <header id="mainHeader"><h1>hughes meyer studio</h1>
-             <nav id="mainNav">
-                 <ul>
-                     <li><a href="../index.html">projects</a></li>
-                     <li><a href="../publications.html">publications</a></li>
-                     <li><a href="../press.html">press</a></li>
-                     <li><a href="../about.html">about</a></li>
-                     <li><a href="../contact.html">contact</a></li>
-                 </ul>
-             </nav>
-         </header>
-         <article id="sidePanel">
-             <header id="projectHeader">
-                 <img class="projectHeaderImg" src="../images/projects/{% block mainProjectFolder %}{% endblock %}/cover-main.jpg" alt={% block mainProjectCoverAlt %}{% endblock %}/>
-                 <h2>{% block mainProjectTitle %}{% endblock %}</h2>
-                 <p>{% block mainProjectPublisher %}{% endblock %}</p>
-                 <p>{% block mainProjectAuthor %}{% endblock %}
-                 </p>
-             </header>
-             
-             <p id="aboutProject">{% block mainProjectAbout %}{% endblock %}
-             </p>
-         </article>
+    <title>Projects</title>
+</head>
+
+<body>
+    <header id="mainHeader"><h1>hughes meyer studio</h1>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="../index.html">projects</a></li>
+                <li><a href="../publications.html">publications</a></li>
+                <li><a href="../press.html">press</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article id="sidePanel">
+        <header id="projectHeader">
+            <a href="https://mitpress.mit.edu/index.php?q=books/architecture-error" target="_blank">
+                <img class="projectHeaderImg" src="../images/projects/{% block mainProjectFolder %}{% endblock %}/cover-main.jpg" alt={% block mainProjectCoverAlt %}{% endblock %}/>
+            </a>
+
+            <h2>{% block mainProjectTitle %}{% endblock %}</h2>
+            <p>{% block mainProjectPublisher %}{% endblock %}</p>
+            <p>{% block mainProjectAuthor %}{% endblock %}
+            </p>
+        </header>
+
+        <p id="aboutProject">{% block mainProjectAbout %}{% endblock %}
+        </p>
+    </article>
 
 
-         <div id="mainProjectGridContainer">
-            {% block subProjects %}{% endblock %} 
+    <div id="mainProjectGridContainer">
+        {% block subProjects %}{% endblock %} 
 
-         </div>
-         
-         
-         <script src="../js/jquery.min.js"></script>
-         <script src="../js/three-line-menu.js"></script>
-         <script src="../js/optimize-grid-layout.js"></script>
-         <script src="../js/project-partial-scroll.js"></script>
+    </div>
 
-         
-     </body>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/three-line-menu.js"></script>
+    <script src="../js/optimize-grid-layout.js"></script>
+    <script src="../js/project-partial-scroll.js"></script>
+
+
+</body>
 </html>
