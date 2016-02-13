@@ -109,7 +109,7 @@ a:hover {
         color: #fff;  
     }
     
-    #menu {
+    #hamburgerMenu {
         width: 30px;
         height: 30px;
         position: absolute;
@@ -127,14 +127,14 @@ a:hover {
     #mainNav {
 			display: none;
 		}
-    #menu.active {
+    #hamburgerMenu.active {
 			color: #fff;
 		}
     
 }
 
 @media screen and (min-width: 580px) {
-		#menu {
+		#hamburgerMenu {
 			display: none;
 		}
 	}
