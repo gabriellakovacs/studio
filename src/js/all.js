@@ -108,7 +108,7 @@ $(document).ready(function (e) {
 
     //FUNCTIONS ONLY FOR THE CONTACT PAGE
     if (document.getElementById("map")) {
-        initialize();
+        initMap();
     }
 
  
@@ -161,19 +161,19 @@ $(document).ready(function (e) {
         //set images' width propery as a percentage of their container - so that scaling will be proportional to the tallest image
 
         var tallestImgActualHeight = viewportHeight / 2 - headerH - borders,
-        tallestImgActualWidth = tallestImgWidth / tallestImgHeight * tallestImgActualHeight,
+            tallestImgActualWidth = tallestImgWidth / tallestImgHeight * tallestImgActualHeight,
+            upperImagesTotalW =  16 * upperImages.length,
+            lowerImagesTotalW =  16 * lowerImages.length,
+            nrOfLowerImages = lowerImages.length,
+            nrOfUpperImages = upperImages.length;
 
-        upperImagesTotalW =  16 * upperImages.length,
-        lowerImagesTotalW =  16 * lowerImages.length;
 
-
-
-        for (var i = 0; i < lowerImages.length;  i++) {
+        for (var i = 0; i < nrOfLowerImages;  i++) {
             document.getElementById(lowerImages[i][0]).style.width = (lowerImages[i][1] / tallestImgWidth * tallestImgActualWidth).toString().concat("px");
             lowerImagesTotalW += lowerImages[i][1] / tallestImgWidth * tallestImgActualWidth;
         }
 
-        for (var i = 0; i < upperImages.length;  i++) {
+        for (var i = 0; i < nrOfUpperImages;  i++) {
             document.getElementById(upperImages[i][0]).style.width = (upperImages[i][1] / tallestImgWidth * tallestImgActualWidth).toString().concat("px");
             upperImagesTotalW += upperImages[i][1] / tallestImgWidth * tallestImgActualWidth;
         }
@@ -215,7 +215,7 @@ $(document).ready(function (e) {
         //collect all possible column row arrangements based on the number of grid items (exlude those the are less efficient then the ones that are already considered)
         var gridDimensions = [];
         
-        for (i = 1; i <= nrOfBoxes; i++) {
+        for (var i = 1; i <= nrOfBoxes; i++) {
             
             if ((gridDimensions.length === 0) || (Math.ceil(nrOfBoxes / i) < Math.ceil(nrOfBoxes / (i-1)))) {
                 gridDimensions.push([i, Math.ceil(nrOfBoxes / i)]);
@@ -226,7 +226,7 @@ $(document).ready(function (e) {
         //select the row-column combination that maximazis the grid element size
         var bestFit = [];
         
-         for (i = 0; i < gridDimensions.length; i++) {
+         for (var i = 0; i < gridDimensions.length; i++) {
             if (bestFit.length === 0 || 
                 Math.min(availableW / (gridDimensions[i][0] + 1), availableH / gridDimensions[i][1]) > Math.min(availableW / (bestFit[0] + 1), availableH / bestFit[1])) {
                 bestFit = [gridDimensions[i][0], gridDimensions[i][1]];
@@ -242,13 +242,17 @@ $(document).ready(function (e) {
             var viewportRatio = availableH / window.innerHeight / bestFit[1] * 80;
             var dimension = "vh";
         }
+
+        var boxW = (viewportRatio).toString().concat(dimension);
+        var boxSideMargin = (viewportRatio / 8).toString().concat(dimension);
+        var boxBottomMargin = (2 * viewportRatio / 8).toString().concat(dimension);
          
-        for (i = 0; i < boxes.length; i++) {
-            boxes[i].style.width = (viewportRatio).toString().concat(dimension);
-            boxes[i].style.height = (viewportRatio).toString().concat(dimension);
-            boxes[i].style.marginLeft = (viewportRatio / 8).toString().concat(dimension);
-            boxes[i].style.marginRight = (viewportRatio / 8).toString().concat(dimension);
-            boxes[i].style.marginBottom = (2 * viewportRatio / 8).toString().concat(dimension);  
+        for (i = 0; i < nrOfBoxes; i++) {
+            boxes[i].style.width = boxW;
+            boxes[i].style.height = boxW;
+            boxes[i].style.marginLeft = boxSideMargin;
+            boxes[i].style.marginRight = boxSideMargin;
+            boxes[i].style.marginBottom =  boxBottomMargin;
         }
         
         //document.getElementById("grid").style.paddingRight = (viewportRatio / 80 * 100).toString().concat(dimension);
@@ -257,122 +261,117 @@ $(document).ready(function (e) {
     /*----------------------SUB PROJECT PAGE FUNCTIONS----------------------*/
     /*set subproject container to occupy the available space left*/
 
-    window.onresize = function () {
-        var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+     if (document.getElementById("sub-project-container")) {
+        window.onresize = function () {
+            var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-        subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
-    };
+            subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
+        };
 
-    window.onload = function () {
-        var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
-    };
-
+        window.onload = function () {
+            var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
+        };
+     }
+    
     /*set image zoom on subproject images*/
     $("#zoom").elevateZoom({constrainType:"height", constrainSize:274, zoomType: "lens", containLensZoom: true,  cursor: "none", borderSize: 1}); 
 
 
-    function initialize() {
-    var mapCanvas = document.getElementById('map');
-    var mapOptions = {
-    center: new google.maps.LatLng(51.529630, -0.061613),
-    zoom: 16,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-    var style = [
-    {
-        featureType: 'all',
-        elementType: 'geometry.fill',
-        stylers: [
-            {color:'#ffffff'}
-        ]
-    },
-    {
-        featureType: 'all',
-        elementType: 'labels.text.stroke',
-        stylers: [
-            {visibility:'off'}
-        ]
-    },
-    {
-        featureType: 'all',
-        elementType: 'labels.text.fill',
-        stylers: [
-            {visibility:'off'}
-        ]
-    },
-    {
-        featureType: 'water',
-        elementType: 'all',
-        stylers: [
-            {color:'#777777'}
-        ]
-    },
-    {
-        featureType: 'road',
-        elementType: 'labels.text.fill',
-        stylers: [
-            {color:'#292929'}, 
-            {visibility:'on'}
-        ]
-    },
-    {
-        featureType: 'transit.station',
-        elementType: 'labels.icon',
-        stylers: [
-            {saturation:'-80'}
-        ]
-    },
-    {
-        featureType: 'transit.station',
-        elementType: 'labels.text.fill',
-        stylers: [
-            {color:'#000000'}, 
-            {visibility:'on'}
-        ]
-    },
-    {
-        featureType: 'transit.station',
-        elementType: 'labels.text.stroke',
-        stylers: [
-            {color:'#000000'}, 
-            {visibility:'on'}, 
-            {weight:'1'}
-        ]
-    },
-    {
-        featureType: 'poi.park',
-        elementType: 'geometry.fill',
-        stylers: [
-            {color:'#aaaaaa'}
-        ]
-    },
-    {
-        featureType: 'road',
-        elementType: 'geometry.stroke',
-        stylers: [
-            {weight:'1'},
-            {color:'#cccccc'}
-        ]
-    },
-    {
-        featureType: 'water',
-        elementType: 'geometry.fill',
-        stylers: [
-            {color:'#353535'}
-        ]
-    }
-];
-    map.set('styles', style);
-    var marker = new google.maps.Marker({
-    position:  new google.maps.LatLng(51.529630, -0.061613),
-    map: map,
-    title: 'Hughes Meyer Studio',
-    icon: 'images/marker.png'
-    });
+    function initMap() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+            center: new google.maps.LatLng(51.529630, -0.061613),
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var style = [
+        {
+            featureType: 'all',
+            elementType: 'geometry.fill',
+            stylers: [
+                {color:'#ffffff'}
+            ]
+        },
+        {
+            featureType: 'all',
+            elementType: 'labels.text.stroke',
+            stylers: [
+                {visibility:'off'}
+            ]
+        },
+        {
+            featureType: 'all',
+            elementType: 'labels.text.fill',
+            stylers: [
+                {visibility:'off'}
+            ]
+        },
+        {
+            featureType: 'road',
+            elementType: 'labels.text.fill',
+            stylers: [
+                {color:'#292929'}, 
+                {visibility:'on'}
+            ]
+        },
+        {
+            featureType: 'all',
+            elementType: 'labels.icon',
+            stylers: [
+                {saturation:'-100'}
+            ]
+        },
+        {
+            featureType: 'transit.station',
+            elementType: 'labels.text.fill',
+            stylers: [
+                {color:'#000000'}, 
+                {visibility:'on'}
+            ]
+        },
+        {
+            featureType: 'transit.station',
+            elementType: 'labels.text.stroke',
+            stylers: [
+                {color:'#000000'}, 
+                {visibility:'on'}, 
+                {weight:'1'}
+            ]
+        },
+        {
+            featureType: 'poi.park',
+            elementType: 'geometry.fill',
+            stylers: [
+                {color:'#eeeeee'}
+            ]
+        },
+        {
+            featureType: 'road',
+            elementType: 'geometry.stroke',
+            stylers: [
+                {weight:'1'},
+                {color:'#cccccc'}
+            ]
+        },
+        {
+            featureType: 'water',
+            elementType: 'geometry.fill',
+            stylers: [
+                {color:'#353535'}
+            ]
+        }
+        ];
+        map.set('styles', style);
+        var marker = new google.maps.Marker({
+        position:  new google.maps.LatLng(51.529630, -0.061613),
+        map: map,
+        title: 'Hughes Meyer Studio',
+        icon: 'images/marker.png'
+        });
 
-}
+    }
 
 
 });
