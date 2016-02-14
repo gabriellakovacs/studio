@@ -1,3 +1,4 @@
+'use strict';
 var tallestImgHeight = 373,
     tallestImgWidth = 150,
     headerH = 37,
@@ -28,7 +29,7 @@ var lowerImages = [
         ["stampede", 150],
         ["steamroom", 350], 
         ["herPractice", 250], 
-        ["pianoTesting2", 350], 
+        ["pianoTesting2", 350]
      ],
 
     upperImages = [
@@ -102,8 +103,15 @@ $(document).ready(function (e) {
 
     //FUNCTIONS ONLY FOR THE MAIN PROJECT PAGE
     if (document.getElementById("mainProjectGridContainer")) {
-        gridLayout() ;
+        gridLayout();
     }
+
+    //FUNCTIONS ONLY FOR THE CONTACT PAGE
+    if (document.getElementById("map")) {
+        initialize();
+    }
+
+ 
     
 
     
@@ -141,11 +149,14 @@ $(document).ready(function (e) {
         || document.body.clientHeight;
 
         //set height for upper and lower images' container
-        for (i = 0; i < upperImagesContainer.length; i++) {
-            upperImagesContainer[i].style.height = (viewportHeight / 2 - headerH - borders).toString().concat("px");
-            lowerImagesContainer[i].style.height = (viewportHeight / 2 - headerH - borders).toString().concat("px");
-        }
+        var imagesContainerLength = upperImagesContainer.length;
+        var collageImgHeight = (viewportHeight / 2 - headerH - borders).toString().concat("px");
+        $.each(upperImagesContainer, setCollageImgHeight);
+        $.each(lowerImagesContainer, setCollageImgHeight);
 
+        function setCollageImgHeight (index, value){
+            value.style.height = collageImgHeight;
+        }
 
         //set images' width propery as a percentage of their container - so that scaling will be proportional to the tallest image
 
@@ -157,12 +168,12 @@ $(document).ready(function (e) {
 
 
 
-        for (i = 0; i < lowerImages.length;  i++) {
+        for (var i = 0; i < lowerImages.length;  i++) {
             document.getElementById(lowerImages[i][0]).style.width = (lowerImages[i][1] / tallestImgWidth * tallestImgActualWidth).toString().concat("px");
             lowerImagesTotalW += lowerImages[i][1] / tallestImgWidth * tallestImgActualWidth;
         }
 
-        for (i = 0; i < upperImages.length;  i++) {
+        for (var i = 0; i < upperImages.length;  i++) {
             document.getElementById(upperImages[i][0]).style.width = (upperImages[i][1] / tallestImgWidth * tallestImgActualWidth).toString().concat("px");
             upperImagesTotalW += upperImages[i][1] / tallestImgWidth * tallestImgActualWidth;
         }
@@ -260,8 +271,108 @@ $(document).ready(function (e) {
     /*set image zoom on subproject images*/
     $("#zoom").elevateZoom({constrainType:"height", constrainSize:274, zoomType: "lens", containLensZoom: true,  cursor: "none", borderSize: 1}); 
 
+
+    function initialize() {
+    var mapCanvas = document.getElementById('map');
+    var mapOptions = {
+    center: new google.maps.LatLng(51.529630, -0.061613),
+    zoom: 16,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var style = [
+    {
+        featureType: 'all',
+        elementType: 'geometry.fill',
+        stylers: [
+            {color:'#ffffff'}
+        ]
+    },
+    {
+        featureType: 'all',
+        elementType: 'labels.text.stroke',
+        stylers: [
+            {visibility:'off'}
+        ]
+    },
+    {
+        featureType: 'all',
+        elementType: 'labels.text.fill',
+        stylers: [
+            {visibility:'off'}
+        ]
+    },
+    {
+        featureType: 'water',
+        elementType: 'all',
+        stylers: [
+            {color:'#777777'}
+        ]
+    },
+    {
+        featureType: 'road',
+        elementType: 'labels.text.fill',
+        stylers: [
+            {color:'#292929'}, 
+            {visibility:'on'}
+        ]
+    },
+    {
+        featureType: 'transit.station',
+        elementType: 'labels.icon',
+        stylers: [
+            {saturation:'-80'}
+        ]
+    },
+    {
+        featureType: 'transit.station',
+        elementType: 'labels.text.fill',
+        stylers: [
+            {color:'#000000'}, 
+            {visibility:'on'}
+        ]
+    },
+    {
+        featureType: 'transit.station',
+        elementType: 'labels.text.stroke',
+        stylers: [
+            {color:'#000000'}, 
+            {visibility:'on'}, 
+            {weight:'1'}
+        ]
+    },
+    {
+        featureType: 'poi.park',
+        elementType: 'geometry.fill',
+        stylers: [
+            {color:'#aaaaaa'}
+        ]
+    },
+    {
+        featureType: 'road',
+        elementType: 'geometry.stroke',
+        stylers: [
+            {weight:'1'},
+            {color:'#cccccc'}
+        ]
+    },
+    {
+        featureType: 'water',
+        elementType: 'geometry.fill',
+        stylers: [
+            {color:'#353535'}
+        ]
+    }
+];
+    map.set('styles', style);
+    var marker = new google.maps.Marker({
+    position:  new google.maps.LatLng(51.529630, -0.061613),
+    map: map,
+    title: 'Hughes Meyer Studio',
+    icon: 'images/marker.png'
+    });
+
+}
+
+
 });
-
-
-
-
