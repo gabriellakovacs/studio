@@ -34,9 +34,9 @@
                  <div class="coverImgPlaceholder"></div>
 
                  <h2><cite>{% block subProjectTitle %}{% endblock %}</cite></h2>
-                 <p>{% block subProjectAuthor %}{% endblock %}
-                 <br>
-                 {% block subProjectInfo %}{% endblock %}
+                 <p>
+                    <div class="projectInfo">{% block subProjectInfo %}{% endblock %}</div>
+                    <div class="projectAuthor">{% block subProjectAuthor %}{% endblock %}</div>
                  </p>
 
              </header>

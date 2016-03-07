@@ -35,11 +35,10 @@
                         <h2>The Architecture of Error</h2>
                     </a>
                 </div>
-                <h2>{% block subProjectTitle %}{% endblock %}</h2>
+                <h2><cite>{% block subProjectTitle %}{% endblock %}</cite></h2>
                 <p>
-                    {% block subProjectAuthor %}{% endblock %}
-                    <br>
-                    {% block subProjectInfo %}{% endblock %}
+                    <div class="projectInfo">{% block subProjectInfo %}{% endblock %}</div>
+                    <div class="projectAuthor">{% block subProjectAuthor %}{% endblock %}</div>
                 </p>
             </header>
             <p id="aboutProject">
