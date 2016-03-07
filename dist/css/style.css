@@ -264,6 +264,10 @@ a:hover {
     border: 0;
 }
 
+.contactBody {
+    overflow-x:hidden;
+}
+
 /*--------------------PROJECT PAGES--------------------*/
 /*--------------------SIDE PANEL--------------------*/
 #sidePanel {
@@ -322,6 +326,9 @@ a:hover {
 #aboutProject {
     padding-top: 20px;
     line-height: 22px;
+}
+.projectAuthor {
+    padding-top: 30px;
 }
 
 
