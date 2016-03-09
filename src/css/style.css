@@ -29,8 +29,8 @@ body {
     padding-left: 20px;
     overflow-x: visible;
     overflow-y: visible;
-	color: #6E6E6E;
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #6E6E6E;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 14px;
 }
 
@@ -50,7 +50,7 @@ body {
 #mainHeader h1 {
     color: #676767;
     padding-left: 20px;
-	font-size: 16px;
+    font-size: 16px;
     font-weight: bold;
     line-height: 26px;
     margin: 0;
@@ -80,7 +80,7 @@ body {
 }
 
 a:hover {
-	color: #000000;
+    color: #000000;
 }
 
 /*--------------------SMALL SCREEN MENU--------------------*/
@@ -122,21 +122,21 @@ a:hover {
         text-align: center;
         z-index: 55;
         color: black;
-		}
+        }
     #mainNav {
-			display: none;
-		}
+            display: none;
+        }
     #hamburgerMenu.active {
-			color: #fff;
-		}
+            color: #fff;
+        }
     
 }
 
 @media screen and (min-width: 580px) {
-		#hamburgerMenu {
-			display: none;
-		}
-	}
+        #hamburgerMenu {
+            display: none;
+        }
+    }
 
 /*--------------------INDEX PAGE PICTURES GRID--------------------*/    
  #indexPicturesGridContainer {
@@ -329,7 +329,7 @@ a:hover {
 }
 
 /* showing title with semi-transarent background on hover effect*/
-
+/*--------------------MAIN PROJECT GRID--------------------*/
 #mainProjectGridContainer {
     width: 85vh;/*set by js*/
     height: 85vh;
@@ -395,13 +395,13 @@ a:hover {
 .onHoverShowCaptionContainer:hover .onHoverShowCaptionCaption {
         opacity: 1;
         }
-
+/*--------------------SUB PROJECT IMG CONTAINER--------------------*/
 #sub-project-container {
     position: fixed;
     top: 37px;
     left: 320px;
     display: inline-block;
-    width: 500px; /*set by javascript */
+    width: 80vw; /*set by javascript */
     padding-top: 3vh;   
 }
 
