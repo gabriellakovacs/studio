@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html class="html" lang="en-US">
-     <head>
-         <meta charset="utf-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
-         <link rel="shortcut icon" href="../images/favicon.ico?373000845"/>
-         
-         <link href="../css/style.css" rel="stylesheet" type="text/css">
-         
-         <title>Projects</title>
-     </head>
-    
-    
-     <body>
-        <header id="mainHeader"><h1>hughes meyer studio</h1>
-            <div id="hamburgerMenu">&#9776</div>
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="../index.html">projects</a></li>
-                    <li><a href="../publications.html">publications</a></li>
-                    <li><a href="../press.html">press</a></li>
-                    <li><a href="../about.html">about</a></li>
-                    <li><a href="../contact.html">contact</a></li>
-                </ul>
-            </nav>
+    <link rel="shortcut icon" href="../images/favicon.ico?373000845"/>
+
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+
+    <title>Projects</title>
+</head>
+
+
+<body>
+    <header id="mainHeader"><h1>hughes meyer studio</h1>
+        <div id="hamburgerMenu">&#9776</div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="../index.html">projects</a></li>
+                <li><a href="../publications.html">publications</a></li>
+                <li><a href="../press.html">press</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article id="sidePanel">
+        <header id="projectHeader">
+            <div class="onHoverShowCaptionContainer">
+                <img class="projectHeaderImg subProjectHeaderImg onHoverShowCaptionImg" src="../images/projects/{% block mainProjectFolder %}{% endblock %}/cover.jpg" alt={% block coverImageAlt %}{% endblock %}/>
+                <a href="index.html" class="onHoverShowCaptionCaption">
+                    <h2>Drawings that Count</h2>
+                </a>
+            </div>
+            <h2><cite>{% block subProjectTitle %}{% endblock %}</cite></h2>
+            <p>
+                <div class="projectInfo">{% block subProjectInfo %}{% endblock %}</div>
+                <div class="projectAuthor">{% block subProjectAuthor %}{% endblock %}</div>
+            </p>
         </header>
-         
-        <article id="sidePanel">
-            <header id="projectHeader">
-                <div class="onHoverShowCaptionContainer">
-                    <img class="projectHeaderImg subProjectHeaderImg onHoverShowCaptionImg" src="../images/projects/{% block mainProjectFolder %}{% endblock %}/cover.jpg" alt={% block coverImageAlt %}{% endblock %}/>
-                    <a href="index.html" class="onHoverShowCaptionCaption">
-                        <h2>Drawings that Count</h2>
-                    </a>
-                </div>
-                <h2><cite>{% block subProjectTitle %}{% endblock %}</cite></h2>
-                <p>
-                    <div class="projectInfo">{% block subProjectInfo %}{% endblock %}</div>
-                    <div class="projectAuthor">{% block subProjectAuthor %}{% endblock %}</div>
-                </p>
-            </header>
- 
-             <p id="aboutProject">
-             {% block aboutProject %}{% endblock %}
-             </p>
-      
-         </article>
-         
-        
-     <div id="sub-project-container">
-         <nav>
-             <a id="previous" href={% block prevProjectHref %}{% endblock %} title="view previous project"></a>
-             <a id="next" href={% block nextProjectHref %}{% endblock %} title="view next project"></a>
-         </nav>
 
-         
-   
-         <img {% block zoomId %}{% endblock %} src="../images/projects/{% block mainProjectFolder %}{% endblock %}/{% block subProjectImgName %}{% endblock %}.jpg" alt={% block subProjectAlt %}{% endblock %} {% block zoomSrc %}{% endblock %} />            
-  
+        <p id="aboutProject">
+            {% block aboutProject %}{% endblock %}
+        </p>
 
-         
-     </div>
-    
-     <script src="../js/jquery.min.js"></script>
-     <script src="../js/jquery.elevatezoom.js"></script>
-     <script src="../js/all.js"></script>
-     </body>
+    </article>
+
+
+    <div id="sub-project-container">
+        <nav>
+            <a id="previous" href={% block prevProjectHref %}{% endblock %} title="view previous project"></a>
+            <a id="next" href={% block nextProjectHref %}{% endblock %} title="view next project"></a>
+        </nav>
+        <img {% block zoomId %}{% endblock %} src="../images/projects/{% block mainProjectFolder %}{% endblock %}/{% block subProjectImgName %}{% endblock %}.jpg" alt={% block subProjectAlt %}{% endblock %} {% block zoomSrc %}{% endblock %} />            
+    </div>
+    <div class="zoomContainer">
+        <div class='zoomLens'></div>
+        <div class="zoomWindowContainer">
+            <div class='zoomWindow'></div>
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.elevatezoom.js"></script>
+    <script src="../js/all.js"></script>
+</body>
 </html>
