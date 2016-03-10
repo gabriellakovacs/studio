@@ -72,19 +72,28 @@ var lowerImages = [
 
 $(document).ready(function (e) {
     //get elements
-    var upperImagesContainer = document.querySelectorAll(".upperImages");
-    var lowerImagesContainer = document.querySelectorAll(".lowerImages");
-    var indexPicturesGridContainer = document.getElementById("indexPicturesGridContainer");
+    var horizontalScroll = document.getElementById("horizontalScroll") || undefined;
+    var upperImagesContainer = document.querySelectorAll(".upperImages") || undefined;
+    var lowerImagesContainer = document.querySelectorAll(".lowerImages") || undefined;
+    var indexPicturesGridContainer = document.getElementById("indexPicturesGridContainer") || undefined;
     var side = 320,
         rightMargin = 20;
     var mainHeaderH = 37;
-    var boxes = document.querySelectorAll(".mainProjectGridBlock");
-    var mainProjectGridContainer = document.getElementById("mainProjectGridContainer");
-    var subProjectContainer = document.getElementById("sub-project-container");
+    var boxes = document.querySelectorAll(".mainProjectGridBlock") || undefined;
+    var mainProjectGridContainer = document.getElementById("mainProjectGridContainer") || undefined;
+    var subProjectContainer = document.getElementById("sub-project-container") || undefined;
+
+    var mapCanvas = document.getElementById('map') || undefined;
+
+    var hamburgerMenu = document.getElementById("hamburgerMenu") || undefined;
+    
+    var mainNav = document.getElementById("mainNav") || undefined;
+
+    var projectHeader = document.getElementById("projectHeader") || undefined;
     
 
     //FUNCTIONS ONLY FOR THE MAIN INDEX PAGE
-    if (document.getElementById("horizontalScroll")) {
+    if (horizontalScroll) {
         scrollHorizontally();
 
         if (window.addEventListener) {
@@ -97,17 +106,17 @@ $(document).ready(function (e) {
         window.attachEvent("onmousewheel", scrollHorizontally);
     }
     }
-    if (document.getElementById("indexPicturesGridContainer")) {
+    if (indexPicturesGridContainer) {
         scaleCollage(); 
     }
 
     //FUNCTIONS ONLY FOR THE MAIN PROJECT PAGE
-    if (document.getElementById("mainProjectGridContainer")) {
+    if (mainProjectGridContainer) {
         gridLayout();
     }
 
     //FUNCTIONS ONLY FOR THE CONTACT PAGE
-    if (document.getElementById("map")) {
+    if (mapCanvas) {
         initMap();
     }
 
@@ -117,28 +126,28 @@ $(document).ready(function (e) {
     
 
     $(window).resize(function (e) {
-        if (document.getElementById("mainProjectGridContainer")) {
+        if (mainProjectGridContainer) {
             gridLayout() ;
         }
-        if (document.getElementById("indexPicturesGridContainer")) {
+        if (indexPicturesGridContainer) {
             scaleCollage(); 
         }
     });
 
 
     //----------------------HAMBURGER MENU----------------------
-    $("#hamburgerMenu").click(function () {
-        $("#mainNav").toggle();
-        if ($("#hamburgerMenu").hasClass("active")) {
-            $("#hamburgerMenu").removeClass("active");
+    hamburgerMenu.click(function () {
+        mainNav.toggle();
+        if (hamburgerMenu.hasClass("active")) {
+            hamburgerMenu.removeClass("active");
         } else {
-            $("#hamburgerMenu").addClass("active");
+            hamburgerMenu.addClass("active");
         }
     });
     $(window).resize(function () {
         if (window.innerWidth > 580) {
-            $("#mainNav").removeAttr("style");
-            $("#hamburgerMenu").removeClass("active");
+            mainNav.removeAttr("style");
+            hamburgerMenu.removeClass("active");
         }
     });
 
@@ -194,7 +203,7 @@ $(document).ready(function (e) {
     /*----------------------PROJECT PAGE FUNCTIONS----------------------*/
     /*main and sub project pages have a side bar that contains info about the project, this is the only section of the page that is allowed to scroll, we need a partial fix function for that*/
     $(window).scroll(function(){
-        $('#projectHeader').css('top', $(window).scrollTop());
+        projectHeader.css('top', $(window).scrollTop());
     });
 
     /*----------------------MAIN PROJECT PAGE FUNCTIONS----------------------*/
@@ -261,10 +270,9 @@ $(document).ready(function (e) {
     /*----------------------SUB PROJECT PAGE FUNCTIONS----------------------*/
     /*set subproject container to occupy the available space left*/
 
-     if (document.getElementById("sub-project-container")) {
+     if (subProjectContainer) {
         window.onresize = function () {
             var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
             subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
         };
 
@@ -272,14 +280,19 @@ $(document).ready(function (e) {
             var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
         };
+
+         /*set image zoom on subproject images*/
+        
+
+     }
+     if (zoom) {
+        $("#zoom").elevateZoom({zoomType: "lens", containLensZoom: true}); 
      }
     
-    /*set image zoom on subproject images*/
-    $("#zoom").elevateZoom({constrainType:"height", constrainSize:274, zoomType: "lens", containLensZoom: true,  cursor: "none", borderSize: 1}); 
+   
 
-
+    /*----------------------CONTACT PAGE MAP----------------------*/
     function initMap() {
-        var mapCanvas = document.getElementById('map');
         var mapOptions = {
             center: new google.maps.LatLng(51.529630, -0.061613),
             zoom: 15,
