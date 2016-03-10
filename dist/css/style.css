@@ -345,7 +345,6 @@ a:hover {
     position: relative;
     overflow: hidden;
     display: inline-block;
-    font-size:  10pt;
     margin: 4%;/*set by js*/
     margin-top: 0;
     width: 24%;/*set by js*/
@@ -369,7 +368,6 @@ a:hover {
 .onHoverShowCaptionCaption {
     background-color: rgba(110, 110, 110, .8);
     color: #fff;
-    font-size: 2vh;
     z-index: 1;
         -webkit-transition: all 300ms ease-out;
         -moz-transition: all 300ms ease-out;
