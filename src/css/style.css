@@ -450,3 +450,7 @@ a:hover {
     position:absolute;
 
 }
+
+.zoomWindow{
+    z-index:999;
+}

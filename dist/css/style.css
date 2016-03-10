@@ -448,5 +448,7 @@ a:hover {
 .zoomContainer{
     -webkit-transform: translateZ(0);
     position:absolute;
-
+}
+.zoomWindow{
+    z-index:999;
 }
