@@ -90,6 +90,8 @@ $(document).ready(function (e) {
     var mainNav = document.getElementById("mainNav") || undefined;
 
     var projectHeader = document.getElementById("projectHeader") || undefined;
+
+    var zoom = $("#zoom");
     
 
     //FUNCTIONS ONLY FOR THE MAIN INDEX PAGE
