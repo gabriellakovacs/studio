@@ -91,7 +91,7 @@ $(document).ready(function (e) {
 
     var projectHeader = document.getElementById("projectHeader") || undefined;
 
-    var zoom = $("#zoom");
+    var zoom = document.getElementById("zoom") || undefined;
     
 
     //FUNCTIONS ONLY FOR THE MAIN INDEX PAGE
