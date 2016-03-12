@@ -204,9 +204,11 @@ $(document).ready(function (e) {
 
     /*----------------------PROJECT PAGE FUNCTIONS----------------------*/
     /*main and sub project pages have a side bar that contains info about the project, this is the only section of the page that is allowed to scroll, we need a partial fix function for that*/
-    $(window).scroll(function(){
-        projectHeader.css('top', $(window).scrollTop());
-    });
+    if(projectHeader){
+        $(window).scroll(function(){
+            projectHeader.css('top', $(window).scrollTop());
+        });
+    }
 
     /*----------------------MAIN PROJECT PAGE FUNCTIONS----------------------*/
 
