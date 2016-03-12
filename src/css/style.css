@@ -95,6 +95,7 @@ a:hover {
         text-align: left;
         background-color: rgba(110, 110, 110, .9); 
         z-index: 50;
+        display: none;
     }
   
     #mainHeader li {
@@ -107,13 +108,12 @@ a:hover {
     #mainHeader a {
         color: #fff;  
     }
-    
     #hamburgerMenu {
         width: 30px;
         height: 30px;
         position: absolute;
         right: 0px;
-        top:15px;
+        top:5px;
         display: inline-block;
         background-color:none;
         cursor: pointer;
@@ -123,9 +123,7 @@ a:hover {
         z-index: 55;
         color: black;
         }
-    #mainNav {
-            display: none;
-        }
+
     #hamburgerMenu.active {
             color: #fff;
         }
