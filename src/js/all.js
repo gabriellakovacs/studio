@@ -138,18 +138,26 @@ $(document).ready(function (e) {
 
 
     //----------------------HAMBURGER MENU----------------------
-    hamburgerMenu.click(function () {
-        mainNav.toggle();
-        if (hamburgerMenu.hasClass("active")) {
-            hamburgerMenu.removeClass("active");
+    hamburgerMenu.onclick = function () {
+       
+
+        if (hamburgerMenu.className.indexOf("active") != -1) {
+            hamburgerMenu.className = hamburgerMenu.className.replace("active", "");
+            hamburgerMenu.innerHTML = "&#9776";
+            mainNav.style.display = 'none';
+
         } else {
-            hamburgerMenu.addClass("active");
+            hamburgerMenu.className = hamburgerMenu.className + "active";
+            hamburgerMenu.innerHTML = "&times;";
+            mainNav.style.display = 'block';
         }
-    });
+    };
     $(window).resize(function () {
         if (window.innerWidth > 580) {
-            mainNav.removeAttr("style");
-            hamburgerMenu.removeClass("active");
+            mainNav.removeAttribute("style");
+            if (hamburgerMenu.className.indexOf("active") != -1) {
+                hamburgerMenu.className[hamburgerMenu.className.indexOf("active")] = "";
+            }
         }
     });
 
