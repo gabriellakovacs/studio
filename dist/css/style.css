@@ -486,6 +486,7 @@ a:hover {
         left: -20px;
         padding: 20px;
         width: 100vw;
-        height: auto;   
+        height: auto;  
+         box-sizing:border-box;  
     }
 }
