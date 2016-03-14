@@ -83,59 +83,6 @@ a:hover {
     color: #000000;
 }
 
-/*--------------------SMALL SCREEN MENU--------------------*/
-@media (max-width:580px) {
-    #mainNav {
-        width: 100vw;
-        height: 100vh;
-        right: 0;
-        top:0;
-        padding-right: 0;
-        padding-top: 30px;
-        text-align: left;
-        background-color: rgba(110, 110, 110, .9); 
-        z-index: 50;
-        display: none;
-    }
-  
-    #mainHeader li {
-        display: block;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 45%;
-        color: #fff;  
-    }
-    #mainHeader a {
-        color: #fff;  
-    }
-    #hamburgerMenu {
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        right: 0px;
-        top:5px;
-        display: inline-block;
-        background-color:none;
-        cursor: pointer;
-        font-size:20px;
-        font-weight: bold;
-        text-align: center;
-        z-index: 55;
-        color: black;
-        }
-
-    #hamburgerMenu.active {
-            color: #fff;
-        }
-    
-}
-
-@media screen and (min-width: 580px) {
-        #hamburgerMenu {
-            display: none;
-        }
-    }
-
 /*--------------------INDEX PAGE PICTURES GRID--------------------*/    
  #indexPicturesGridContainer {
     padding-top: 37px;
@@ -276,7 +223,7 @@ a:hover {
     background-color: #fff;
 }
 #projectHeader {
-    width: 280px;
+    width: 100%;
     position: relative;
     left: 0;
     top: 0;
@@ -298,8 +245,8 @@ a:hover {
 
 .projectHeaderImg {
     border: 1px solid #A0A0A0;
-    width: 280px;
-    height: 167px;
+    width: 100%;
+    height: auto;
 }
 
 .subProjectHeaderImg {
@@ -307,7 +254,7 @@ a:hover {
 }
 
 #projectHeader .coverImgPlaceholder {
-    width: 280px;
+    width: 100%;
     height: 167px;
     display: inline-block;
 }
@@ -424,7 +371,7 @@ a:hover {
     margin: auto;
     border: none; 
 }
-
+/*--------------------ZOOM--------------------*/
 .zoomLens {
     background-position: 0px 0px;
     float: left;display: none;
@@ -444,4 +391,84 @@ a:hover {
 
 .zoomWindow{
     z-index:999;
+}
+/*--------------------SMALL SCREEN--------------------*/
+/*--------------------SMALL SCREEN MENU--------------------*/
+@media (max-width:580px) {
+    #mainNav {
+        width: 100vw;
+        height: 100vh;
+        right: 0;
+        top:0;
+        padding-right: 0;
+        padding-top: 30px;
+        text-align: left;
+        background-color: rgba(110, 110, 110, .9); 
+        z-index: 50;
+        display: none;
+    }
+  
+    #mainHeader li {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 45%;
+        color: #fff;  
+    }
+    #mainHeader a {
+        color: #fff;  
+    }
+    #hamburgerMenu {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 0px;
+        top:5px;
+        display: inline-block;
+        background-color:none;
+        cursor: pointer;
+        font-size:20px;
+        font-weight: bold;
+        text-align: center;
+        z-index: 55;
+        color: black;
+        }
+
+    #hamburgerMenu.active {
+            color: #fff;
+        }
+    
+}
+
+@media screen and (min-width: 580px) {
+        #hamburgerMenu {
+            display: none;
+        }
+    }
+/*--------------------SMALL SCREEN LAYOUT--------------------*/
+@media (max-width:580px) {
+    #sidePanel {
+        position: relative;
+        top: 50px;
+        width: 100vw;
+        box-sizing:border-box;
+        left:-20px;
+        text-align: justify;
+        min-height: 0;
+    }
+    #mainProjectGridContainer {
+        width: 100vw;
+        display: block; 
+        left:0;
+        top:50px;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    .mainProjectGridBlock {
+        margin: 2vw;
+        //margin-top: 0;
+        width: 40vw;
+        height: 40vw;
+    }
 }
