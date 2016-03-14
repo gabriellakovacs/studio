@@ -116,7 +116,7 @@ $(document).ready(function (e) {
 
     //FUNCTIONS ONLY FOR THE MAIN PROJECT PAGE
     if (mainProjectGridContainer) {
-        if(window.innerWidth > smallScreenWsmallScreenW){
+        if(window.innerWidth > smallScreenW){
             gridLayout();
         }
     }
@@ -133,7 +133,7 @@ $(document).ready(function (e) {
 
     $(window).resize(function (e) {
         if (mainProjectGridContainer) {
-            if(window.innerWidth > smallScreenWsmallScreenW){
+            if(window.innerWidth > smallScreenW){
                 gridLayout();
             }
         }
@@ -159,7 +159,7 @@ $(document).ready(function (e) {
         }
     };
     $(window).resize(function () {
-        if (window.innerWidth > smallScreenWsmallScreenW) {
+        if (window.innerWidth > smallScreenW) {
             mainNav.removeAttribute("style");
             if (hamburgerMenu.className.indexOf("active") != -1) {
                 hamburgerMenu.className[hamburgerMenu.className.indexOf("active")] = "";
@@ -291,7 +291,7 @@ $(document).ready(function (e) {
      if (subProjectContainer) {
         window.onresize = function () {
             var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if(viewportW > smallScreenWsmallScreenW){
+            if(viewportW > smallScreenW){
                 subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
             }
             
@@ -300,7 +300,7 @@ $(document).ready(function (e) {
 
         window.onload = function () {
             var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if(viewportW > smallScreenWsmallScreenW){
+            if(viewportW > smallScreenW){
                 subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
             }
 
