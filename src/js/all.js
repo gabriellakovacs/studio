@@ -114,7 +114,9 @@ $(document).ready(function (e) {
 
     //FUNCTIONS ONLY FOR THE MAIN PROJECT PAGE
     if (mainProjectGridContainer) {
-        gridLayout();
+        if(window.innerWidth > 580){
+            gridLayout();
+        }
     }
 
     //FUNCTIONS ONLY FOR THE CONTACT PAGE
@@ -129,7 +131,9 @@ $(document).ready(function (e) {
 
     $(window).resize(function (e) {
         if (mainProjectGridContainer) {
-            gridLayout() ;
+            if(window.innerWidth > 580){
+                gridLayout();
+            }
         }
         if (indexPicturesGridContainer) {
             scaleCollage(); 
