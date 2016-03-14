@@ -92,6 +92,8 @@ $(document).ready(function (e) {
     var projectHeader = document.getElementById("projectHeader") || undefined;
 
     var zoom = document.getElementById("zoom") || undefined;
+
+    var smallScreenW = 580;
     
 
     //FUNCTIONS ONLY FOR THE MAIN INDEX PAGE
@@ -114,7 +116,7 @@ $(document).ready(function (e) {
 
     //FUNCTIONS ONLY FOR THE MAIN PROJECT PAGE
     if (mainProjectGridContainer) {
-        if(window.innerWidth > 580){
+        if(window.innerWidth > smallScreenWsmallScreenW){
             gridLayout();
         }
     }
@@ -131,7 +133,7 @@ $(document).ready(function (e) {
 
     $(window).resize(function (e) {
         if (mainProjectGridContainer) {
-            if(window.innerWidth > 580){
+            if(window.innerWidth > smallScreenWsmallScreenW){
                 gridLayout();
             }
         }
@@ -157,7 +159,7 @@ $(document).ready(function (e) {
         }
     };
     $(window).resize(function () {
-        if (window.innerWidth > 580) {
+        if (window.innerWidth > smallScreenWsmallScreenW) {
             mainNav.removeAttribute("style");
             if (hamburgerMenu.className.indexOf("active") != -1) {
                 hamburgerMenu.className[hamburgerMenu.className.indexOf("active")] = "";
@@ -289,17 +291,23 @@ $(document).ready(function (e) {
      if (subProjectContainer) {
         window.onresize = function () {
             var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
+            if(viewportW > smallScreenWsmallScreenW){
+                subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
+            }
+            
+            
         };
 
         window.onload = function () {
             var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
+            if(viewportW > smallScreenWsmallScreenW){
+                subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
+            }
+
+            
         };
 
          /*set image zoom on subproject images*/
-        
-
      }
      if (zoom) {
         $("#zoom").elevateZoom({zoomType: "lens", containLensZoom: true}); 
