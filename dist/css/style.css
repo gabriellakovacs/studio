@@ -21,6 +21,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 100%;
     font-weight: inherit;
 }
+
 /*--------------------GLOBAL STYLES--------------------*/
 body {
     background-color: #fff;
@@ -487,6 +488,41 @@ a:hover {
         padding: 20px;
         width: 100vw;
         height: auto;  
-         box-sizing:border-box;  
+        box-sizing:border-box; 
+    }
+
+    .pressContainer, .publicationsContainer {
+        margin-top: 50px;
+        width: 100vw;
+        position: relative;
+        left: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing:border-box; 
+    }
+
+    .publicationsImg {
+        padding-top: 6%;
+        margin-left: 0;
+        width: 100vw;
+        box-sizing:border-box; 
+        position: relative;
+        left: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: auto;
+        
+    }
+
+    .map {
+        display: block;
+        position: relative;
+        width: 100vw;
+        height: 60vh;
+        top: 50px;
+        left:-20px;
+    }
+    .contactContent{
+        top: 0;
     }
 }
