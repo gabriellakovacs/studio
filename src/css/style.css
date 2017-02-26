@@ -121,14 +121,18 @@ a:hover {
 
 .indexPictureGridBlock {
     display: inline-block;
-/*    border: 1px solid red;*/
-    
+/*    border: 1px solid red;*/   
 }
 
-#pianoTrajectory {
+.indexPictureGridBlock a {
+    display: inline-block; 
+}
+
+#pianoTrajectory, #undercut {
     position: absolute;
+    top: 0;
     right: 0;
-}   
+}    
 
 /*--------------------ABOUT--------------------*/
 .aboutContainer {
@@ -238,7 +242,8 @@ a:hover {
 }
 #projectHeader  .onHoverShowCaptionCaption{
     margin-left: 1px;
-    margin-top: 1px;
+    margin-top: -1px;
+    
 }
 
 .projectHeaderImg {

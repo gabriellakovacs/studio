@@ -13,6 +13,13 @@ gulp.task("jsmin", function() {
     .pipe(gulp.dest("./dist/js"));
 });
 
+//minify css files
+gulp.task("cssmin", function() {
+  return gulp.src("./src/css/*.css")
+    .pipe(uglify())
+    .pipe(gulp.dest("./dist/css"));
+});
+
 //create all files from templates
 gulp.task("alltemplates", function() {
   gulp.src("./src/template/**/*.html")
@@ -21,7 +28,7 @@ gulp.task("alltemplates", function() {
 });
 
 //compress images
-gulp.task('imgmin', () => {
+gulp.task('imgmin', function() {
     return gulp.src('./src/images/**/*')
         .pipe(imagemin({
             progressive: true,
@@ -29,4 +36,11 @@ gulp.task('imgmin', () => {
             use: [pngquant()]
         }))
         .pipe(gulp.dest('dist/images'));
+});
+
+//create all files from templates
+gulp.task("chancetemplates", function() {
+  gulp.src("./src/template/chance/*.html")
+    .pipe(swig())
+    .pipe(gulp.dest("./dist/chance"))
 });

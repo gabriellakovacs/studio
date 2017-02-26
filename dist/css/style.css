@@ -125,8 +125,13 @@ a:hover {
     
 }
 
-#pianoTrajectory {
+.indexPictureGridBlock a {
+    display: inline-block; 
+}
+
+#pianoTrajectory, #undercut {
     position: absolute;
+    top: 0;
     right: 0;
 }   
 
@@ -238,7 +243,8 @@ a:hover {
 }
 #projectHeader  .onHoverShowCaptionCaption{
     margin-left: 1px;
-    margin-top: 1px;
+    margin-top: -1px;
+    
 }
 
 .projectHeaderImg {
@@ -520,7 +526,7 @@ a:hover {
         width: 100vw;
         height: 60vh;
         top: 50px;
-        left:-20px;
+        left:0;
     }
     .contactContent{
         top: 0;

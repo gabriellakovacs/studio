@@ -5,6 +5,7 @@ var tallestImgHeight = 373,
     borders = 2;
 
 var lowerImages = [ 
+        ["undercut", 250], 
         ["errorL", 250], 
         ["pianoTrajectory", 350], 
         ["qanat", 250],  //
@@ -33,6 +34,7 @@ var lowerImages = [
      ],
 
     upperImages = [
+        ["aeolian", 350], 
         ["chance", 150], 
         ["forAllIntenets", 250], 
         ["hanging", 250], 
