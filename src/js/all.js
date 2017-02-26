@@ -288,35 +288,13 @@ $(document).ready(function (e) {
     }
 
     /*----------------------SUB PROJECT PAGE FUNCTIONS----------------------*/
-    /*set subproject container to occupy the available space left*/
+    /*set image zoom on subproject images*/
 
-     if (subProjectContainer) {
-        window.onresize = function () {
-            var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if(viewportW > smallScreenW){
-                subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
-            }
-            
-            
-        };
-
-        window.onload = function () {
-            var viewportW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if(viewportW > smallScreenW){
-                subProjectContainer.style.width = (viewportW - side - rightMargin).toString().concat("px");
-            }
-
-            
-        };
-
-         /*set image zoom on subproject images*/
-     }
      if (zoom) {
         $("#zoom").elevateZoom({zoomType: "lens", containLensZoom: true}); 
      }
     
-   
-
+    
     /*----------------------CONTACT PAGE MAP----------------------*/
     function initMap() {
         var mapOptions = {

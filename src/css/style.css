@@ -345,7 +345,7 @@ a:hover {
     top: 10vh;
     left: 320px;
     display: inline-block;
-    width: 80vw; /*set by javascript */
+    width: calc(100vw - 320px - 20px);
     /*padding-top: 3vh;   */
 }
 
