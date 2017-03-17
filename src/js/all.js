@@ -3,7 +3,7 @@ var tallestImgHeight = 373,
     tallestImgWidth = 150,
     headerH = 37,
     borders = 2;
-howTheDrawingThatCantForgetForgot
+
 var lowerImages = [ 
         ["undercut", 250], 
         ["facilitiesForCorrection", 250], 
@@ -38,6 +38,7 @@ var lowerImages = [
     upperImages = [
         ["aeolian", 350], 
         ["fearIsInTheDetail", 350], 
+        ["differance", 350], 
         ["chance", 150], 
         ["forAllIntenets", 250], 
         ["hanging", 250], 
