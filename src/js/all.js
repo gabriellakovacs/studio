@@ -36,6 +36,7 @@ var lowerImages = [
 
     upperImages = [
         ["aeolian", 350], 
+        ["fearIsInTheDetail", 350], 
         ["chance", 150], 
         ["forAllIntenets", 250], 
         ["hanging", 250], 
