@@ -3,10 +3,11 @@ var tallestImgHeight = 373,
     tallestImgWidth = 150,
     headerH = 37,
     borders = 2;
-
+howTheDrawingThatCantForgetForgot
 var lowerImages = [ 
         ["undercut", 250], 
         ["facilitiesForCorrection", 250], 
+        ["howTheDrawingThatCantForgetForgot", 250], 
         ["errorL", 250], 
         ["pianoTrajectory", 350], 
         ["qanat", 250],  //
