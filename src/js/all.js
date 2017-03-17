@@ -6,7 +6,7 @@ var tallestImgHeight = 373,
 
 var lowerImages = [ 
         ["undercut", 250], 
-        ["facilitiesForCorrection", 250], 
+        ["facilitiesForCorrection", 350], 
         ["howTheDrawingThatCantForgetForgot", 250],
         ["estate", 350], 
         ["errorL", 250], 
@@ -38,7 +38,7 @@ var lowerImages = [
 
     upperImages = [
         ["aeolian", 350], 
-        ["fearIsInTheDetail", 350], 
+        ["fearIsInTheDetail", 150], 
         ["differance", 350], 
         ["chance", 150], 
         ["forAllIntenets", 250], 
