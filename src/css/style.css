@@ -372,7 +372,18 @@ a:hover {
     right: 0;
 }
 
-#sub-project-container img {
+#sub-project-container .image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    width: calc(95vw - 280px);
+    display: block;
+    margin: auto;
+    border: none; 
+}
+
+#sub-project-container .zoomImage {
     height: 80vh;
     width: auto;
     display: block;
@@ -486,8 +497,17 @@ a:hover {
         left: 0;
         display: block;
         padding: 0;
+    } 
+    #sub-project-container .image {
+        position: relative;
+        left: -20px;
+        padding: 20px;
+        width: 100vw;
+        height: auto;  
+        box-sizing:border-box; 
     }
-    #sub-project-container img {
+
+    #sub-project-container .zoomImage {
         position: relative;
         left: -20px;
         padding: 20px;
