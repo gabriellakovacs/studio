@@ -7,7 +7,8 @@ var tallestImgHeight = 373,
 var lowerImages = [ 
         ["undercut", 250], 
         ["facilitiesForCorrection", 250], 
-        ["howTheDrawingThatCantForgetForgot", 250], 
+        ["howTheDrawingThatCantForgetForgot", 250],
+        ["estate", 350], 
         ["errorL", 250], 
         ["pianoTrajectory", 350], 
         ["qanat", 250],  //
