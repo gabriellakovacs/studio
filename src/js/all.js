@@ -76,6 +76,10 @@ var lowerImages = [
 
 
 
+window.onload = function() {
+  document.querySelector('main').style.opacity = '1';
+};
+
 
 $(document).ready(function (e) {
     //get elements
@@ -211,9 +215,7 @@ $(document).ready(function (e) {
         }
 
         //set indexPicturesGridContainer  width to fit all pictures intended to be on one line
-        console.log('upperImagesTotalW ' + upperImagesTotalW);
-        console.log('lowerImagesTotalW ' + lowerImagesTotalW);
-        indexPicturesGridContainer.style.width = (Math.max(upperImagesTotalW, lowerImagesTotalW) + 100).toString().concat("px");
+        indexPicturesGridContainer.style.width = (Math.max(upperImagesTotalW, lowerImagesTotalW) + 350).toString().concat("px");
     }
 
 

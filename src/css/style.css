@@ -23,6 +23,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /*--------------------GLOBAL STYLES--------------------*/
+main {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
 body {
     background-color: #fff;
     margin: 0;
