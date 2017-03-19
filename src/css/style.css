@@ -487,6 +487,10 @@ a:hover {
     #mainHeader a {
         color: #fff;  
     }
+
+    #mainHeader .logo a {
+        color: #6E6E6E;  
+    }
     #hamburgerMenu {
         width: 30px;
         height: 30px;
