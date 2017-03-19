@@ -232,6 +232,19 @@ a:hover {
     z-index: 2;
     background-color: #fff;
 }
+
+@media (max-width:580px) {
+    #sidePanel {
+        position: relative;
+        top: 0;
+        width: 100vw;
+        box-sizing:border-box;
+        left:-20px;
+        text-align: left;
+        min-height: 0;
+    }
+}
+
 #projectHeader {
     width: 100%;
     position: relative;
@@ -257,14 +270,26 @@ a:hover {
     height: auto;
 }
 
+@media (max-width:580px) {
+    .projectHeaderImg { margin-top: 50px; }
+}
+
 .subProjectHeaderImg {
     opacity: 0.4;
+}
+
+@media (max-width:580px) {
+    .subProjectHeaderImg { display: none; }
 }
 
 #projectHeader .coverImgPlaceholder {
     width: 100%;
     height: 167px;
     display: inline-block;
+}
+
+@media (max-width:580px) {
+    #projectHeader .coverImgPlaceholder { height: 0; }
 }
 
 #aboutProject {
@@ -354,6 +379,10 @@ a:hover {
     /*padding-top: 3vh;   */
 }
 
+@media (max-width:580px) {
+    #sub-project-container { display: none; }
+}
+
 #sub-project-container nav {
     width: 100%;
     height: 100%;
@@ -394,6 +423,22 @@ a:hover {
     display: block;
     margin: auto;
     border: none; 
+}
+
+.sub-project-container-mobile {
+    display: none;
+}
+
+@media (max-width:580px) {
+    .sub-project-container-mobile {
+        display: block;
+        margin-left: -20px;
+        padding-top: 50px;
+    }
+
+    .sub-project-container-mobile img{
+        width: 100%;
+    }
 }
 /*--------------------ZOOM--------------------*/
 .zoomLens {
@@ -471,15 +516,6 @@ a:hover {
     }
 /*--------------------SMALL SCREEN LAYOUT--------------------*/
 @media (max-width:580px) {
-    #sidePanel {
-        position: relative;
-        top: 50px;
-        width: 100vw;
-        box-sizing:border-box;
-        left:-20px;
-        text-align: justify;
-        min-height: 0;
-    }
     #mainProjectGridContainer {
         width: 100vw;
         display: block; 
@@ -494,31 +530,6 @@ a:hover {
         //margin-top: 0;
         width: 40vw;
         height: 40vw;
-    }
-
-    #sub-project-container {
-        position: relative;
-        top: 50px;
-        left: 0;
-        display: block;
-        padding: 0;
-    } 
-    #sub-project-container .image {
-        position: relative;
-        left: -20px;
-        padding: 20px;
-        width: 100vw;
-        height: auto;  
-        box-sizing:border-box; 
-    }
-
-    #sub-project-container .zoomImage {
-        position: relative;
-        left: -20px;
-        padding: 20px;
-        width: 100vw;
-        height: auto;  
-        box-sizing:border-box; 
     }
 
     .pressContainer, .publicationsContainer {
