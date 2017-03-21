@@ -221,11 +221,12 @@ $(document).ready(function (e) {
 
     function scrollHorizontally(e) {
         if(e) {
+            e.preventDefault();
             e = window.event || e;
             var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-            document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
-            document.body.scrollLeft -= (delta*40); // Multiplied by 40
-            e.preventDefault();
+            var scrollLeft = document.querySelector('.scrollLeft');
+            //document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
+            scrollLeft.scrollLeft -= (delta*40); // Multiplied by 40       
         }
     }
 
