@@ -152,15 +152,38 @@ a:hover {
     padding-top: 30px;
     float: left;
 }
+
+@media (max-width:580px) {
+    .aboutContainer {
+        width: auto;
+    }
+}
+
+
 .aboutColumn {
     width:205px;
     float: left;
     margin-right: 20px;
 }
 
+@media (max-width:580px) {
+    .aboutColumn {
+        width: calc(100vw - 40px);
+        float: none;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+}
+
 .aboutColumnImg {
     border: 1px solid black;
     width:205px;
+}
+
+@media (max-width:580px) {
+    .aboutColumnImg {
+        width: calc(100vw - 40px);
+    }
 }
 
 .aboutPhotoCredit {
@@ -571,7 +594,7 @@ a:hover {
         width: 100vw;
         height: 60vh;
         top: 50px;
-        left:0;
+        left:-20px;
     }
     .contactContent{
         top: 0;
