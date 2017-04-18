@@ -139,11 +139,15 @@ a:hover {
     display: inline-block; 
 }
 
-#pianoTrajectory, #undercut {
+#pianoTrajectory {
     position: absolute;
     top: 0;
     right: 0;
 }    
+
+/*#myesier {
+    margin-right: 19.8vh;
+}    */
 
 /*--------------------ABOUT--------------------*/
 .aboutContainer {

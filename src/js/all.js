@@ -5,10 +5,11 @@ var tallestImgHeight = 373,
     borders = 2;
 
 var lowerImages = [ 
+        ["coalminer", 150], 
         ["undercut", 250], 
         ["facilitiesForCorrection", 350], 
-        ["howTheDrawingThatCantForgetForgot", 250],
-        ["estate", 350], 
+        ["differance", 350], 
+        ["fearIsInTheDetail", 150], 
         ["errorL", 250], 
         ["pianoTrajectory", 350], 
         ["qanat", 250],  //
@@ -38,8 +39,10 @@ var lowerImages = [
 
     upperImages = [
         ["aeolian", 350], 
-        ["fearIsInTheDetail", 150], 
-        ["differance", 350], 
+        ["myesier", 350], 
+        ["howTheDrawingThatCantForgetForgot", 250],
+        ["estate", 150], 
+        ["cowboy", 150],
         ["chance", 150], 
         ["forAllIntenets", 250], 
         ["hanging", 250], 
@@ -212,6 +215,15 @@ $(document).ready(function (e) {
         for (var i = 0; i < nrOfUpperImages;  i++) {
             document.getElementById(upperImages[i][0]).style.width = (upperImages[i][1] / tallestImgWidth * tallestImgActualWidth).toString().concat("px");
             upperImagesTotalW += upperImages[i][1] / tallestImgWidth * tallestImgActualWidth;
+        }
+
+        //set margins where needed relative to image width
+        var extraMarginElements = document.querySelectorAll('.js-margin-right');
+        var nrOfExtraMarginElements = extraMarginElements.length;
+
+        for (var i = 0; i < nrOfExtraMarginElements;  i++) {
+            var w = extraMarginElements[i].style.width;
+            extraMarginElements[i].style.marginRight = Number(w.replace('px', '')) * extraMarginElements[i].dataset.margin + 'px';
         }
 
         //set indexPicturesGridContainer  width to fit all pictures intended to be on one line
