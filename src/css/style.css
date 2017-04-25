@@ -278,6 +278,24 @@ a:hover {
     }
 }
 
+.mainProjectTitle {
+    text-align: center;
+    color: #6e6e6e;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+} 
+
+@media (max-width:580px) {
+    .mainProjectTitle { 
+        position: relative; 
+        top: 0;
+        transform: translate(0, 0);
+    }
+}
+
 #projectHeader {
     width: 100%;
     position: relative;
@@ -331,6 +349,11 @@ a:hover {
 }
 .projectAuthor {
     padding-top: 30px;
+}
+
+
+.coverImgPlaceholder {
+    position: relative;
 }
 
 /* showing title with semi-transarent background on hover effect*/
@@ -390,6 +413,7 @@ a:hover {
     box-sizing:border-box;
     padding: 5%;
 }
+
 
 .onHoverShowCaptionCaption h2{
     text-align: center;
