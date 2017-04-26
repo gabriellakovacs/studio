@@ -117,6 +117,10 @@ a:hover {
     position: relative;
 }
 
+.upperImages--padding-left {
+    padding-left: calc(20px + 0.2vh);
+}
+
 .upperImages, .lowerImages {
     height: 44vh;
 }

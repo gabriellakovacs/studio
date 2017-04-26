@@ -5,7 +5,7 @@ var tallestImgHeight = 373,
     borders = 2;
 
 var lowerImages = [ 
-        ["coalminer", 150], 
+        ["ebj", 350], 
         ["undercut", 250], 
         ["facilitiesForCorrection", 350], 
         ["differance", 350], 
@@ -223,7 +223,7 @@ $(document).ready(function (e) {
 
         for (var i = 0; i < nrOfExtraMarginElements;  i++) {
             var w = extraMarginElements[i].style.width;
-            extraMarginElements[i].style.marginRight = Number(w.replace('px', '')) * extraMarginElements[i].dataset.margin + 'px';
+            extraMarginElements[i].style.marginRight = Number(w.replace('px', '')) * extraMarginElements[i].dataset.margin - 20 + 'px';
         }
 
         //set indexPicturesGridContainer  width to fit all pictures intended to be on one line
