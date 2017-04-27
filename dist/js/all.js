@@ -1,1 +1,418 @@
-"use strict";var tallestImgHeight=373,tallestImgWidth=150,headerH=37,borders=2,lowerImages=[["ebj",350],["undercut",250],["facilitiesForCorrection",350],["differance",350],["fearIsInTheDetail",150],["errorL",250],["pianoTrajectory",350],["qanat",250],["drawings",250],["rochesterOutside2",250],["colosseum",250],["sketchpad",350],["wings",150],["gap",150],["fokker",250],["manAndComputer",150],["concrete",150],["tablet",150],["whirligig",250],["uluo",350],["steamRender",250],["hannibalpassage",250],["trackAndField",350],["preserve",250],["ancientcity",250],["casting",150],["stampede",150],["steamroom",350],["herPractice",250],["pianoTesting2",350]],upperImages=[["aeolian",350],["myesier",350],["howTheDrawingThatCantForgetForgot",250],["estate",150],["cowboy",150],["chance",150],["forAllIntenets",250],["hanging",250],["balfron",250],["release",150],["verne",150],["fullStop",250],["unionStockyards",350],["piranesi",150],["workInProgress",150],["USAFhangar",150],["pianoTesting1",250],["tamper",150],["rochesterOutside1",150],["smallrock",150],["rochesterConst",250],["frot",250],["embryos",250],["smote",150],["inversion",250],["insertaeSedis",250],["needle",150],["skypode",250],["futuresexchange",250],["steamInsulation",350],["merDeGlace",350],["error",150],["hold",150],["enso",250],["rochester",250],["workInProgress2",150]];window.onload=function(){document.querySelector("main").style.opacity="1"},$(document).ready(function(a){function r(){function g(a,b){b.style.height=f}var a=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,f=(c.length,(a/2-headerH-borders).toString().concat("px"));$.each(c,g),$.each(d,g);for(var h=a/2-headerH-borders,i=tallestImgWidth/tallestImgHeight*h,j=16*upperImages.length,k=16*lowerImages.length,l=lowerImages.length,m=upperImages.length,n=0;n<l;n++)document.getElementById(lowerImages[n][0]).style.width=(lowerImages[n][1]/tallestImgWidth*i).toString().concat("px"),k+=lowerImages[n][1]/tallestImgWidth*i;for(var n=0;n<m;n++)document.getElementById(upperImages[n][0]).style.width=(upperImages[n][1]/tallestImgWidth*i).toString().concat("px"),j+=upperImages[n][1]/tallestImgWidth*i;for(var o=document.querySelectorAll(".js-margin-right"),p=o.length,n=0;n<p;n++){var q=o[n].style.width;o[n].style.marginRight=Number(q.replace("px",""))*o[n].dataset.margin-20+"px"}e.style.width=(Math.max(j,k)+350).toString().concat("px")}function s(a){if(a){a.preventDefault(),a=window.event||a;var b=Math.max(-1,Math.min(1,a.wheelDelta||-a.detail));document.querySelector(".scrollLeft").scrollLeft-=40*b}}function t(){var a=window.innerWidth-f-g,b=window.innerHeight-2*h;j.style.width=a.toString().concat("px");for(var c=i.length,d=[],e=1;e<=c;e++)(0===d.length||Math.ceil(c/e)<Math.ceil(c/(e-1)))&&d.push([e,Math.ceil(c/e)]);for(var k=[],e=0;e<d.length;e++)(0===k.length||Math.min(a/(d[e][0]+1),b/d[e][1])>Math.min(a/(k[0]+1),b/k[1]))&&(k=[d[e][0],d[e][1]]);if(a/(k[0]+1)<=b/k[1])var l=a/window.innerWidth/(k[0]+1)*80,m="vw";else var l=b/window.innerHeight/k[1]*80,m="vh";var n=l.toString().concat(m),o=(l/8).toString().concat(m),p=(2*l/8).toString().concat(m);for(e=0;e<c;e++)i[e].style.width=n,i[e].style.height=n,i[e].style.marginLeft=o,i[e].style.marginRight=o,i[e].style.marginBottom=p}function u(){var a={center:new google.maps.LatLng(51.52963,-.061613),zoom:15,mapTypeId:google.maps.MapTypeId.ROADMAP},b=new google.maps.Map(l,a),c=[{featureType:"all",elementType:"geometry.fill",stylers:[{color:"#ffffff"}]},{featureType:"all",elementType:"labels.text.stroke",stylers:[{visibility:"off"}]},{featureType:"all",elementType:"labels.text.fill",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"labels.text.fill",stylers:[{color:"#292929"},{visibility:"on"}]},{featureType:"all",elementType:"labels.icon",stylers:[{saturation:"-100"}]},{featureType:"transit.station",elementType:"labels.text.fill",stylers:[{color:"#000000"},{visibility:"on"}]},{featureType:"transit.station",elementType:"labels.text.stroke",stylers:[{color:"#000000"},{visibility:"on"},{weight:"1"}]},{featureType:"poi.park",elementType:"geometry.fill",stylers:[{color:"#eeeeee"}]},{featureType:"road",elementType:"geometry.stroke",stylers:[{weight:"1"},{color:"#cccccc"}]},{featureType:"water",elementType:"geometry.fill",stylers:[{color:"#353535"}]}];b.set("styles",c);new google.maps.Marker({position:new google.maps.LatLng(51.52963,-.061613),map:b,title:"Hughes Meyer Studio",icon:"images/marker.png"})}var b=document.getElementById("horizontalScroll")||void 0,c=document.querySelectorAll(".upperImages")||void 0,d=document.querySelectorAll(".lowerImages")||void 0,e=document.getElementById("indexPicturesGridContainer")||void 0,f=320,g=20,h=37,i=document.querySelectorAll(".mainProjectGridBlock")||void 0,j=document.getElementById("mainProjectGridContainer")||void 0,l=(document.getElementById("sub-project-container"),document.getElementById("map")||void 0),m=document.getElementById("hamburgerMenu")||void 0,n=document.getElementById("mainNav")||void 0,o=document.getElementById("projectHeader")||void 0,p=document.getElementById("zoom")||void 0,q=580;b&&(s(),window.addEventListener?(window.addEventListener("mousewheel",s,!1),window.addEventListener("DOMMouseScroll",s,!1)):window.attachEvent("onmousewheel",s)),e&&r(),j&&window.innerWidth>q&&t(),l&&u(),$(window).resize(function(a){j&&window.innerWidth>q&&t(),e&&r()}),m.onclick=function(){-1!=m.className.indexOf("active")?(m.className=m.className.replace("active",""),m.innerHTML="&#9776",n.style.display="none"):(m.className=m.className+"active",m.innerHTML="&times;",n.style.display="block")},$(window).resize(function(){window.innerWidth>q&&(n.removeAttribute("style"),-1!=m.className.indexOf("active")&&(m.className[m.className.indexOf("active")]=""))}),o&&$(window).scroll(function(){o.css("top",$(window).scrollTop())}),p&&$("#zoom").elevateZoom({zoomType:"lens",containLensZoom:!0})});
+'use strict';
+var tallestImgHeight = 373,
+    tallestImgWidth = 150,
+    headerH = 37,
+    borders = 2;
+
+var lowerImages = [ 
+        ["sufferNoFools", 250], 
+        ["undercut", 250], 
+        ["facilitiesForCorrection", 350], 
+        ["differance", 350], 
+        ["fearIsInTheDetail", 150], 
+        ["errorL", 250], 
+        ["pianoTrajectory", 350], 
+        ["qanat", 250],  //
+        ["drawings", 250], 
+        ["rochesterOutside2", 250],
+        ["colosseum", 250],
+        ["sketchpad", 350],
+        ["wings", 150], 
+        ["gap", 150], 
+        ["fokker", 250], 
+        ["manAndComputer", 150], 
+        ["concrete", 150],
+        ["tablet", 150],
+        ["whirligig", 250],
+        ["uluo", 350], 
+        ["steamRender", 250], 
+        ["hannibalpassage", 250], 
+        ["trackAndField", 350], 
+        ["preserve", 250], 
+        ["ancientcity", 250],
+        ["casting", 150],
+        ["stampede", 150],
+        ["steamroom", 350], 
+        ["herPractice", 250], 
+        ["pianoTesting2", 350]
+     ],
+
+    upperImages = [
+        ["aeolian", 350], 
+        ["myesier", 350], 
+        ["howTheDrawingThatCantForgetForgot", 250],
+        ["estate", 150], 
+        ["cowboy", 150],
+        ["chance", 150], 
+        ["forAllIntenets", 250], 
+        ["hanging", 250], 
+        ["balfron", 250], 
+        ["release", 150],
+        ["verne", 150],
+        ["fullStop", 250],
+        ["unionStockyards", 350], 
+        ["piranesi", 150], 
+        ["workInProgress", 150], 
+        ["USAFhangar", 150], 
+        ["pianoTesting1", 250],
+        ["tamper", 150],
+        ["rochesterOutside1", 150],
+        ["smallrock", 150], 
+        ["rochesterConst", 250], 
+        ["frot", 250], 
+        ["embryos", 250], 
+        ["smote", 150], 
+        ["inversion", 250],
+        ["insertaeSedis", 250],
+        ["needle", 150],
+        ["skypode", 250], 
+        ["futuresexchange", 250], 
+        ["steamInsulation", 350], 
+        ["merDeGlace", 350], 
+        ["error", 150], 
+        ["hold", 150],
+        ["enso", 250],
+        ["rochester", 250],
+        ["workInProgress2", 150]
+    ];
+
+
+
+
+window.onload = function() {
+  document.querySelector('main').style.opacity = '1';
+};
+
+
+$(document).ready(function (e) {
+    //get elements
+    var horizontalScroll = document.getElementById("horizontalScroll") || undefined;
+    var upperImagesContainer = document.querySelectorAll(".upperImages") || undefined;
+    var lowerImagesContainer = document.querySelectorAll(".lowerImages") || undefined;
+    var indexPicturesGridContainer = document.getElementById("indexPicturesGridContainer") || undefined;
+    var side = 320,
+        rightMargin = 20;
+    var mainHeaderH = 37;
+    var boxes = document.querySelectorAll(".mainProjectGridBlock") || undefined;
+    var mainProjectGridContainer = document.getElementById("mainProjectGridContainer") || undefined;
+    var subProjectContainer = document.getElementById("sub-project-container") || undefined;
+
+    var mapCanvas = document.getElementById('map') || undefined;
+
+    var hamburgerMenu = document.getElementById("hamburgerMenu") || undefined;
+    
+    var mainNav = document.getElementById("mainNav") || undefined;
+
+    var projectHeader = document.getElementById("projectHeader") || undefined;
+
+    var zoom = document.getElementById("zoom") || undefined;
+
+    var smallScreenW = 580;
+    
+
+    //FUNCTIONS ONLY FOR THE MAIN INDEX PAGE
+    if (horizontalScroll) {
+        scrollHorizontally();
+
+        if (window.addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        window.addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+        } else {
+        // IE 6/7/8
+        window.attachEvent("onmousewheel", scrollHorizontally);
+    }
+    }
+    if (indexPicturesGridContainer) {
+        scaleCollage(); 
+    }
+
+    //FUNCTIONS ONLY FOR THE MAIN PROJECT PAGE
+    if (mainProjectGridContainer) {
+        if(window.innerWidth > smallScreenW){
+            gridLayout();
+        }
+    }
+
+    //FUNCTIONS ONLY FOR THE CONTACT PAGE
+    if (mapCanvas) {
+        initMap();
+    }
+
+ 
+    
+
+    
+
+    $(window).resize(function (e) {
+        if (mainProjectGridContainer) {
+            if(window.innerWidth > smallScreenW){
+                gridLayout();
+            }
+        }
+        if (indexPicturesGridContainer) {
+            scaleCollage(); 
+        }
+    });
+
+
+    //----------------------HAMBURGER MENU----------------------
+    hamburgerMenu.onclick = function () {
+       
+
+        if (hamburgerMenu.className.indexOf("active") != -1) {
+            hamburgerMenu.className = hamburgerMenu.className.replace("active", "");
+            hamburgerMenu.innerHTML = "&#9776";
+            mainNav.style.display = 'none';
+
+        } else {
+            hamburgerMenu.className = hamburgerMenu.className + "active";
+            hamburgerMenu.innerHTML = "&times;";
+            mainNav.style.display = 'block';
+        }
+    };
+    $(window).resize(function () {
+        if (window.innerWidth > smallScreenW) {
+            mainNav.removeAttribute("style");
+            if (hamburgerMenu.className.indexOf("active") != -1) {
+                hamburgerMenu.className[hamburgerMenu.className.indexOf("active")] = "";
+            }
+        }
+    });
+
+    //----------------------MAIN INDEX PAGE FUNCTIONS----------------------
+    function scaleCollage() {
+        var viewportHeight = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+        //set height for upper and lower images' container
+        var imagesContainerLength = upperImagesContainer.length;
+        var collageImgHeight = (viewportHeight / 2 - headerH - borders).toString().concat("px");
+        $.each(upperImagesContainer, setCollageImgHeight);
+        $.each(lowerImagesContainer, setCollageImgHeight);
+
+        function setCollageImgHeight (index, value){
+            value.style.height = collageImgHeight;
+        }
+
+        //set images' width propery as a percentage of their container - so that scaling will be proportional to the tallest image
+
+        var tallestImgActualHeight = viewportHeight / 2 - headerH - borders,
+            tallestImgActualWidth = tallestImgWidth / tallestImgHeight * tallestImgActualHeight,
+            upperImagesTotalW =  16 * upperImages.length,
+            lowerImagesTotalW =  16 * lowerImages.length,
+            nrOfLowerImages = lowerImages.length,
+            nrOfUpperImages = upperImages.length;
+
+
+        for (var i = 0; i < nrOfLowerImages;  i++) {
+            document.getElementById(lowerImages[i][0]).style.width = (lowerImages[i][1] / tallestImgWidth * tallestImgActualWidth).toString().concat("px");
+            lowerImagesTotalW += lowerImages[i][1] / tallestImgWidth * tallestImgActualWidth;
+        }
+
+        for (var i = 0; i < nrOfUpperImages;  i++) {
+            document.getElementById(upperImages[i][0]).style.width = (upperImages[i][1] / tallestImgWidth * tallestImgActualWidth).toString().concat("px");
+            upperImagesTotalW += upperImages[i][1] / tallestImgWidth * tallestImgActualWidth;
+        }
+
+        //set margins where needed relative to image width
+        var extraMarginElements = document.querySelectorAll('.js-margin-right');
+        var nrOfExtraMarginElements = extraMarginElements.length;
+
+        for (var i = 0; i < nrOfExtraMarginElements;  i++) {
+            var w = extraMarginElements[i].style.width;
+            extraMarginElements[i].style.marginRight = Number(w.replace('px', '')) * extraMarginElements[i].dataset.margin - 20 + 'px';
+        }
+
+        //set indexPicturesGridContainer  width to fit all pictures intended to be on one line
+        indexPicturesGridContainer.style.width = (Math.max(upperImagesTotalW, lowerImagesTotalW) + 350).toString().concat("px");
+    }
+
+
+    function scrollHorizontally(e) {
+        if(e) {
+            e.preventDefault();
+            e = window.event || e;
+            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+            var scrollLeft = document.querySelector('.scrollLeft');
+            //document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
+            scrollLeft.scrollLeft -= (delta*40); // Multiplied by 40       
+        }
+    }
+
+    /*----------------------PROJECT PAGE FUNCTIONS----------------------*/
+    /*main and sub project pages have a side bar that contains info about the project, this is the only section of the page that is allowed to scroll, we need a partial fix function for that*/
+    if(projectHeader){
+        $(window).scroll(function(){
+            projectHeader.css('top', $(window).scrollTop());
+        });
+    }
+
+    /*----------------------MAIN PROJECT PAGE FUNCTIONS----------------------*/
+
+    /*main project pages have a grid as navigation to sub projects. the grid elements size needs to be maximised with the constraint that they have to fit into a certain area 
+    the constraints for the grid*/
+  
+    function gridLayout() {
+        
+        //set grid width so that it occupies the total available area
+        var availableW = window.innerWidth - side - rightMargin;
+        var availableH = window.innerHeight - 2*mainHeaderH;
+        mainProjectGridContainer.style.width = (availableW).toString().concat("px");
+        
+        
+        var nrOfBoxes = boxes.length;
+
+        //collect all possible column row arrangements based on the number of grid items (exlude those the are less efficient then the ones that are already considered)
+        var gridDimensions = [];
+        
+        for (var i = 1; i <= nrOfBoxes; i++) {
+            
+            if ((gridDimensions.length === 0) || (Math.ceil(nrOfBoxes / i) < Math.ceil(nrOfBoxes / (i-1)))) {
+                gridDimensions.push([i, Math.ceil(nrOfBoxes / i)]);
+            } 
+        }
+        
+        
+        //select the row-column combination that maximazis the grid element size
+        var bestFit = [];
+        
+         for (var i = 0; i < gridDimensions.length; i++) {
+            if (bestFit.length === 0 || 
+                Math.min(availableW / (gridDimensions[i][0] + 1), availableH / gridDimensions[i][1]) > Math.min(availableW / (bestFit[0] + 1), availableH / bestFit[1])) {
+                bestFit = [gridDimensions[i][0], gridDimensions[i][1]];
+            } 
+         }
+        
+         
+        //set the size of the grid elements
+        if (availableW / (bestFit[0] + 1) <= availableH / bestFit[1]) {
+            var viewportRatio = availableW / window.innerWidth / (bestFit[0] + 1) * 80;
+            var dimension = "vw";
+        } else {
+            var viewportRatio = availableH / window.innerHeight / bestFit[1] * 80;
+            var dimension = "vh";
+        }
+
+        var boxW = (viewportRatio).toString().concat(dimension);
+        var boxSideMargin = (viewportRatio / 8).toString().concat(dimension);
+        var boxBottomMargin = (2 * viewportRatio / 8).toString().concat(dimension);
+         
+        for (i = 0; i < nrOfBoxes; i++) {
+            boxes[i].style.width = boxW;
+            boxes[i].style.height = boxW;
+            boxes[i].style.marginLeft = boxSideMargin;
+            boxes[i].style.marginRight = boxSideMargin;
+            boxes[i].style.marginBottom =  boxBottomMargin;
+        }
+        
+        //document.getElementById("grid").style.paddingRight = (viewportRatio / 80 * 100).toString().concat(dimension);
+    }
+
+    /*----------------------SUB PROJECT PAGE FUNCTIONS----------------------*/
+    /*set image zoom on subproject images*/
+
+     if (zoom) {
+        $("#zoom").elevateZoom({zoomType: "lens", containLensZoom: true}); 
+     }
+    
+    
+    /*----------------------CONTACT PAGE MAP----------------------*/
+    function initMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(51.529630, -0.061613),
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var style = [
+        {
+            featureType: 'all',
+            elementType: 'geometry.fill',
+            stylers: [
+                {color:'#ffffff'}
+            ]
+        },
+        {
+            featureType: 'all',
+            elementType: 'labels.text.stroke',
+            stylers: [
+                {visibility:'off'}
+            ]
+        },
+        {
+            featureType: 'all',
+            elementType: 'labels.text.fill',
+            stylers: [
+                {visibility:'off'}
+            ]
+        },
+        {
+            featureType: 'road',
+            elementType: 'labels.text.fill',
+            stylers: [
+                {color:'#292929'}, 
+                {visibility:'on'}
+            ]
+        },
+        {
+            featureType: 'all',
+            elementType: 'labels.icon',
+            stylers: [
+                {saturation:'-100'}
+            ]
+        },
+        {
+            featureType: 'transit.station',
+            elementType: 'labels.text.fill',
+            stylers: [
+                {color:'#000000'}, 
+                {visibility:'on'}
+            ]
+        },
+        {
+            featureType: 'transit.station',
+            elementType: 'labels.text.stroke',
+            stylers: [
+                {color:'#000000'}, 
+                {visibility:'on'}, 
+                {weight:'1'}
+            ]
+        },
+        {
+            featureType: 'poi.park',
+            elementType: 'geometry.fill',
+            stylers: [
+                {color:'#eeeeee'}
+            ]
+        },
+        {
+            featureType: 'road',
+            elementType: 'geometry.stroke',
+            stylers: [
+                {weight:'1'},
+                {color:'#cccccc'}
+            ]
+        },
+        {
+            featureType: 'water',
+            elementType: 'geometry.fill',
+            stylers: [
+                {color:'#353535'}
+            ]
+        }
+        ];
+        map.set('styles', style);
+        var marker = new google.maps.Marker({
+        position:  new google.maps.LatLng(51.529630, -0.061613),
+        map: map,
+        title: 'Hughes Meyer Studio',
+        icon: 'images/marker.png'
+        });
+
+    }
+
+
+});
