@@ -5,7 +5,7 @@ var tallestImgHeight = 373,
     borders = 2;
 
 var lowerImages = [ 
-        ["ebj", 350], 
+        ["sufferNoFools", 250], 
         ["undercut", 250], 
         ["facilitiesForCorrection", 350], 
         ["differance", 350], 
@@ -44,7 +44,7 @@ var lowerImages = [
         ["estate", 150], 
         ["cowboy", 150],
         ["chance", 150], 
-        ["forAllIntenets", 250], 
+        ["confection", 250], 
         ["hanging", 250], 
         ["balfron", 250], 
         ["release", 150],
@@ -69,7 +69,6 @@ var lowerImages = [
         ["futuresexchange", 250], 
         ["steamInsulation", 350], 
         ["merDeGlace", 350], 
-        ["error", 150], 
         ["hold", 150],
         ["enso", 250],
         ["rochester", 250],
