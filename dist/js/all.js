@@ -69,7 +69,6 @@ var lowerImages = [
         ["futuresexchange", 250], 
         ["steamInsulation", 350], 
         ["merDeGlace", 350], 
-        ["error", 150], 
         ["hold", 150],
         ["enso", 250],
         ["rochester", 250],
