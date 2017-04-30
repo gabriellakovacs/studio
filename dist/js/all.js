@@ -44,7 +44,7 @@ var lowerImages = [
         ["estate", 150], 
         ["cowboy", 150],
         ["chance", 150], 
-        ["forAllIntenets", 250], 
+        ["confection", 250], 
         ["hanging", 250], 
         ["balfron", 250], 
         ["release", 150],
