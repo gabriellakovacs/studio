@@ -143,11 +143,15 @@ a:hover {
     display: inline-block; 
 }
 
-#pianoTrajectory {
+#pianoTrajectory, #sufferNoFools {
     position: absolute;
     top: 0;
     right: 0;
-}    
+}  
+
+#aeolian { 
+    transform: translateX(16.5%);
+}  
 
 /*#myesier {
     margin-right: 19.8vh;
@@ -486,6 +490,11 @@ a:hover {
     border: none; 
 }
 
+#sub-project-container .zoomImage.landscape {
+    height: auto;
+    width: calc(100vw - 320px - 80px);
+}
+
 .sub-project-container-mobile {
     display: none;
 }
@@ -516,7 +525,7 @@ a:hover {
 .zoomContainer{
     -webkit-transform: translateZ(0);
     position:absolute;
-
+    z-index: 10;
 }
 
 .zoomWindow{
