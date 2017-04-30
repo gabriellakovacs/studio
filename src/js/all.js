@@ -39,7 +39,7 @@ var lowerImages = [
 
     upperImages = [
         ["sufferNoFools", 250], 
-        ["aeolian", 375], 
+        ["aeolian", 369], 
         ["howTheDrawingThatCantForgetForgot", 250],
         ["estate", 150], 
         ["cowboy", 150],
