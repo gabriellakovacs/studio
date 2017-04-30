@@ -164,8 +164,8 @@ a:hover {
 
 .rightALign {
     float: right;
+    z-index: 2;
     position: relative;
-    bottom: 0.4vh;
 }
 /*--------------------ABOUT--------------------*/
 .aboutContainer {
