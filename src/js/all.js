@@ -5,7 +5,7 @@ var tallestImgHeight = 373,
     borders = 2;
 
 var lowerImages = [ 
-        ["sufferNoFools", 250], 
+        ["myesier", 350], 
         ["undercut", 250], 
         ["facilitiesForCorrection", 350], 
         ["differance", 350], 
@@ -38,8 +38,8 @@ var lowerImages = [
      ],
 
     upperImages = [
-        ["aeolian", 350], 
-        ["myesier", 350], 
+        ["sufferNoFools", 250], 
+        ["aeolian", 375], 
         ["howTheDrawingThatCantForgetForgot", 250],
         ["estate", 150], 
         ["cowboy", 150],
@@ -226,7 +226,7 @@ $(document).ready(function (e) {
         }
 
         //set indexPicturesGridContainer  width to fit all pictures intended to be on one line
-        indexPicturesGridContainer.style.width = (Math.max(upperImagesTotalW, lowerImagesTotalW) + 350).toString().concat("px");
+        indexPicturesGridContainer.style.width = Math.ceil((Math.max(upperImagesTotalW, lowerImagesTotalW) + 600)).toString().concat("px");
     }
 
 

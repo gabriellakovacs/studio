@@ -143,20 +143,30 @@ a:hover {
     display: inline-block; 
 }
 
-#pianoTrajectory, #sufferNoFools {
+/*#pianoTrajectory, #sufferNoFools {
     position: absolute;
     top: 0;
     right: 0;
-}  
+} */ 
 
-#aeolian { 
+/*#aeolian { 
     transform: translateX(16.5%);
-}  
+} */ 
 
 /*#myesier {
     margin-right: 19.8vh;
 }    */
 
+.block {
+    display: block!important;
+    position: relative;
+}
+
+.rightALign {
+    float: right;
+    position: relative;
+    bottom: 0.4vh;
+}
 /*--------------------ABOUT--------------------*/
 .aboutContainer {
     width: 800px;
