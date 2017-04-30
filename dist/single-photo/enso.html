@@ -48,17 +48,23 @@
                 </p>
             </header>
 
-            
-
         </article>
 
-
         <div id="sub-project-container">
-            <div class="image" style="background-image: url(../images/projects/single-photo/enso.jpg)"></div>
+            <img class="zoomImage" id="zoom" src="../images/projects/single-photo/enso.jpg" alt="Enso" data-zoom-image="../images/projects/single-photo/zoom/enso_zoom.jpg" />
         </div>
+
+        <div class="zoomContainer">
+            <div class='zoomLens'></div>
+            <div class="zoomWindowContainer">
+                <div class='zoomWindow'></div>
+            </div>
+        </div>
+
     </main>
     
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.elevatezoom.js"></script>
     <script src="../js/all.js"></script>
 </body>
 </html>
