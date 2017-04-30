@@ -58,17 +58,24 @@
             </header>
         </article>
 
-
         <div id="sub-project-container">
             <nav>
                 <a id="previous" href="wip.html" title="view previous project"></a>
                 <a id="next" href="wip.html" title="view next project"></a>
             </nav>
-            <div class="image" style="background-image: url(../images/projects/confection/confection.jpg)"></div>   
+            <img class="zoomImage" id="zoom" src="../images/projects/confection/confection.jpg" alt="Confection" data-zoom-image="../images/projects/confection/zoom/confection_zoom.jpg" />
+        </div>
+
+        <div class="zoomContainer">
+            <div class='zoomLens'></div>
+            <div class="zoomWindowContainer">
+                <div class='zoomWindow'></div>
+            </div>
         </div>
     </main>
     
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.elevatezoom.js"></script>
     <script src="../js/all.js"></script>
 </body>
 </html>
